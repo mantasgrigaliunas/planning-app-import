@@ -1,33 +1,65 @@
 <?php
 
-require('../vendor/autoload.php');
+// Variables used globally - will be set from URL (see above code)
+$planningPortalLPA = 'M3645';
+$planningPortalLPAPassword = 'ta8ndri3dge';
+$salesforceUsername = "X";
+$salesforceToken = "X";
+$salesforcePassword = "X";
 
-$app = new Silex\Application();
-$app['debug'] = true;
+ini_set('max_execution_time', 300);  //300 seconds = 5 minutes
+//  Requires
+require_once 'inc/PlanningPortalConnector.php';
+require_once 'inc/SalesForceConnector.php';
+require_once 'inc/LogEntriesAPI/logentries.php';
+require_once 'inc/functions.php';
 
-// Register the monolog logging service
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-  'monolog.logfile' => 'php://stderr',
-));
+// MAIN ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  If we have some stuff in $_GET then let begin..
 
-// Register the Twig templating engine
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-  'twig.path' => __DIR__.'/../views',
-));
+    $PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
+    $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
-// Our web handlers
+    $log->Debug("DOWNLOAD STARTED FOR " . $planningPortalLPA);
 
-$app->get('/', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return 'Mantas';
-});
+//  For each application on Planning Portal
+    try {
+        foreach ($PP->GetListOfProposals() as $PlanningPortalApplication) {
 
-$app->get('/twig/{name}', function ($name) use ($app) {
-    return $app['twig']->render('index.twig', array(
-        'name' => $name,
-    ));
-});
+            $log->Info("Planning Portal Application Reference: " . $PlanningPortalApplication->RefNum);
 
-$app->run();
+            //  Get the whole Proposal
+            $fullApplication = $PP->GetFullProposal($PlanningPortalApplication->RefNum);
+
+
+            //  Get the main XML body with all proposal info (Whole Proposal Less Attachments)
+            $applicationInformation = $PP->GetPlanningApplicationInformation($fullApplication);
+
+
+            // Upload Attachement information to SF (returns SF Object ID)
+            $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
+
+            if ($SFPlanningApplication != "ERROR") {
+                //  Get an array of attachments
+
+                $attachmentArray = $PP->GetAttachments($fullApplication);
+                foreach ($attachmentArray as $attachment) {
+                    // Split the attachment body and content
+                    list($rawheaders, $body) = preg_split("/\R\R/", $attachment, 2);
+                    // Get the Attahcement Headers
+                    $headers = $PP->GetAttachmentHeaders($rawheaders);
+                    // Upload the attachment!
+                    $attachtmentId = $SF->CreateAttachment($body, $headers['File Name'], $SFPlanningApplication);
+                }
+                $planningFee = $SF->CreateFee($SFPlanningApplication, $applicationInformation->Body->Proposal->ApplicationHeader->Payment->AmountDue);
+            }
+        }
+    } catch (Exception $e) {
+      print_r($e);
+        $log->Error("ERROR! Caught Exception: " . $e->getMessage());
+    }
+    $log->Debug("DOWNLOAD COMPLETED FOR " . $planningPortalLPA);
+}
+echo "Process Completed";
 
 ?>
