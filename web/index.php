@@ -59,7 +59,7 @@ require_once 'inc/functions.php';
         $log->Error("ERROR! Caught Exception: " . $e->getMessage());
     }
     $log->Debug("DOWNLOAD COMPLETED FOR " . $planningPortalLPA);
-}
+    
 echo "Process Completed";
 
 ?>
