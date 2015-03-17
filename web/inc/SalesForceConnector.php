@@ -182,12 +182,13 @@ class SalesforceConnection
     }
 
     public function CreatePlanningApplication($applicationInformation)
-    {
+    {#
+        echo('Applicant:: ' . $applicationInformation->Body->Proposal->Applicant . "\n");
         $applicant = $this->CreateContact($applicationInformation->Body->Proposal->Applicant);
-        print_r("Applicant: " . $applicant . "\n");
+        echo("Applicant: " . $applicant . "\n");
 
         $UPRN = $this->CreateUPRN($applicationInformation->Body->Proposal->SiteLocation);
-        print_r("UPRN: " . $UPRN . "\n");
+        echo("UPRN: " . $UPRN . "\n");
 
 
         //  Some application are bloody fussy, and require different descriptions, set the description for the fussy types, else put instructions for council staff to complete.
