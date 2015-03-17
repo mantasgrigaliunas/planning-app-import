@@ -3,8 +3,9 @@
 
 
 // Variables used globally - will be set from URL (see above code)
-$planningPortalLPA = 'M3645';
-$planningPortalLPAPassword = 'ta8ndri3dge';
+//$planningPortalLPA = 'M3645';
+//$planningPortalLPAPassword = 'ta8ndri3dge';
+$path = 'app/Application.xml'
 $salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
 $salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
 $salesforcePassword = "#arcus123";
@@ -22,6 +23,11 @@ require_once 'inc/functions.php';
     //$PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
     $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
+    $xml=simplexml_load_file($path) or die("Error: Cannot create object");
+    print_r($xml);
+
     print_r('Connected');
+
+
 
 ?>
