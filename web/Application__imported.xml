@@ -858,7 +858,6 @@ CHANGE OF USE FROM C2 TO SELF-CONTAINED FLATS</DescriptionText>
 		<Advice>
 			<HaveSoughtAdvice>0</HaveSoughtAdvice>
 			<AdviceDetails>
-				<ns1:FullContactDetailsNotKnown xmlns:ns1="'http://www.govtalk.gov.uk/planning/OneAppCommon-2006'"/>
 			</AdviceDetails>
 		</Advice>
 		<SiteVisit>
