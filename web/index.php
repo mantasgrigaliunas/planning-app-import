@@ -5,7 +5,7 @@
 // Variables used globally - will be set from URL (see above code)
 //$planningPortalLPA = 'M3645';
 //$planningPortalLPAPassword = 'ta8ndri3dge';
-$url = 'http://7f68e5ae.ngrok.com/planningapplications/Application.xml';
+$url = 'Application.xml';
 $salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
 $salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
 $salesforcePassword = "#arcus123";
@@ -25,8 +25,6 @@ try{
     $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
     $plannin = simplexml_load_file($url) or die("Error: Cannot create object");
-
-    print_r($xml);
 
     $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
