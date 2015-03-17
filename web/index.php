@@ -1,7 +1,5 @@
 <?php
 
-
-
 // Variables used globally - will be set from URL (see above code)
 //$planningPortalLPA = 'M3645';
 //$planningPortalLPAPassword = 'ta8ndri3dge';
@@ -16,6 +14,8 @@ ini_set('max_execution_time', 300);  //300 seconds = 5 minutes
 require_once 'inc/SalesForceConnector.php';
 require_once 'inc/LogEntriesAPI/logentries.php';
 require_once 'inc/functions.php';
+require_once 'inc/SoapFault.php';
+
 
 // MAIN ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  If we have some stuff in $_GET then let begin..
@@ -28,9 +28,9 @@ try{
 
     $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
-}catch (Exception $e) {
+}catch (Exception $ex) {
 
-      print_r($e->getMessage());
+      var_dump($ex->faultcode, $ex->faultstring, $ex->faultactor, $ex->detail, $ex->_name, $ex->headerfault);
     }
 
 
