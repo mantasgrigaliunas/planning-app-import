@@ -3,7 +3,8 @@
 // Variables used globally - will be set from URL (see above code)
 //$planningPortalLPA = 'M3645';
 //$planningPortalLPAPassword = 'ta8ndri3dge';
-$url = 'Application_imported.xml';
+//$url = 'Application_imported.xml';
+$url = 'http://7f68e5ae.ngrok.com/planningapplications/Application__imported.xml';
 $salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
 $salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
 $salesforcePassword = "#arcus123";
