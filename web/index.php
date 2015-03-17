@@ -1,5 +1,7 @@
 <?php
 
+
+
 // Variables used globally - will be set from URL (see above code)
 $planningPortalLPA = 'M3645';
 $planningPortalLPAPassword = 'ta8ndri3dge';
@@ -19,6 +21,8 @@ require_once 'inc/functions.php';
 
     //$PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
     //$SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
+    
+    phpinfo();
 
     print_r('Connected');
     
