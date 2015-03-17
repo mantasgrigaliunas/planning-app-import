@@ -23,7 +23,7 @@ require_once 'inc/functions.php';
     //$PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
     $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
-    $xml=simplexml_load_file("Application.xml") or die("Error: Cannot create object");
+    $xml=simplexml_load_file("http://7f68e5ae.ngrok.com/planningapplications/Application.xml") or die("Error: Cannot create object");
     print_r($xml);
 
 
