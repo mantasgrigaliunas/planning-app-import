@@ -18,7 +18,7 @@ require_once 'inc/functions.php';
 //  If we have some stuff in $_GET then let begin..
 
     //$PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
-    $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
+    //$SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
     print_r('Connected');
     
