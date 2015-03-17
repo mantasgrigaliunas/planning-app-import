@@ -5,7 +5,7 @@
 // Variables used globally - will be set from URL (see above code)
 //$planningPortalLPA = 'M3645';
 //$planningPortalLPAPassword = 'ta8ndri3dge';
-$path = 'app/Application.xml';
+$path = 'Application.xml';
 $salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
 $salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
 $salesforcePassword = "#arcus123";
