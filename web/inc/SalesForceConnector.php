@@ -184,10 +184,10 @@ class SalesforceConnection
     public function CreatePlanningApplication($applicationInformation)
     {
         $applicant = $this->CreateContact($applicationInformation->Body->Proposal->Applicant);
-        $this->log->Info("Applicant: " . $applicant);
+        print_r("Applicant: " . $applicant);
 
         $UPRN = $this->CreateUPRN($applicationInformation->Body->Proposal->SiteLocation);
-        $this->log->Info("UPRN: " . $UPRN);
+        print_r("UPRN: " . $UPRN);
 
 
         //  Some application are bloody fussy, and require different descriptions, set the description for the fussy types, else put instructions for council staff to complete.
@@ -236,7 +236,7 @@ class SalesforceConnection
 
         if (strlen($applicationInformation->Body->Proposal->Agent->PersonName->PersonFamilyName) > 0) {
             $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Body->Proposal->Agent);
-            $this->log->Info("Agent: " . $agent);
+           print_r("Agent: " . $agent);
 
         }
 
@@ -252,7 +252,7 @@ class SalesforceConnection
         if ($upsertResponse[0]->success == 1) {
             return $upsertResponse[0]->id;
         } else {
-            $this->log->Error("Error - Could not insert Planning Application: " . $applicationInformation->Body->Proposal->ApplicationHeader->FormattedRefNum);
+            print_r("Error - Could not insert Planning Application: " . $applicationInformation->Body->Proposal->ApplicationHeader->FormattedRefNum);
             return 'ERROR';
         }
     }
@@ -272,7 +272,7 @@ class SalesforceConnection
         //  If we have a contact ID return it, else return error
         if ($SFResponce[0]->success == 1) {
 
-          $this->debugToFile($SFResponce);
+          print_r('Salesforce RESPONSE: ------>>>>>>>>>>>>>>>>> \n' . $SFResponce);
 
             return $SFResponce[0]->id;
         } else {
@@ -335,11 +335,11 @@ class SalesforceConnection
                 return $SFResponce[0]->id;
 
             } else {
-              $this->debugToFile($sObject);
+             print_r('OBJECT ------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>> \n' . $sObject);
                 return 'ERROR';
             }
 
-            $this->log->Error(print_r($SFResponce));
+            print_r($SFResponce);
 
             return 'ERROR';
         }
@@ -371,10 +371,10 @@ class SalesforceConnection
             $SFResponce = $this->SFConnection->create(array($sObject));
 
             if ($SFResponce[0]->success == 1) {
-                $this->log->Info("Account ID " . $SFResponce[0]->id);
+                print_r("Account ID " . $SFResponce[0]->id);
                 return $SFResponce[0]->id;
             } else {
-                $this->log->Error("Failed to Create Account for " . $OrgName);
+                print_r("Failed to Create Account for " . $OrgName);
 
             }
         }
@@ -418,7 +418,7 @@ class SalesforceConnection
             if ($upsertResponse[0]->success == 1) {
                 return $upsertResponse[0]->id;
             } else {
-                $this->log->Error("Failed to Create UPRN for " . $SiteLocation);
+                print_r("Failed to Create UPRN for " . $SiteLocation);
             }
 
 
