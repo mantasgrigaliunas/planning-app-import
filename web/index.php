@@ -30,7 +30,7 @@ try{
 
 }catch (Exception $e) {
 
-      print_r($e);
+      print_r($e->getMessage());
     }
 
 
