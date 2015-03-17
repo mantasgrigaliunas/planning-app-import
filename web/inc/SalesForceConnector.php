@@ -184,10 +184,10 @@ class SalesforceConnection
     public function CreatePlanningApplication($applicationInformation)
     {
         $applicant = $this->CreateContact($applicationInformation->Body->Proposal->Applicant);
-        print_r("Applicant: " . $applicant);
+        print_r("Applicant: " . $applicant . "\n");
 
         $UPRN = $this->CreateUPRN($applicationInformation->Body->Proposal->SiteLocation);
-        print_r("UPRN: " . $UPRN);
+        print_r("UPRN: " . $UPRN . "\n");
 
 
         //  Some application are bloody fussy, and require different descriptions, set the description for the fussy types, else put instructions for council staff to complete.
@@ -236,7 +236,7 @@ class SalesforceConnection
 
         if (strlen($applicationInformation->Body->Proposal->Agent->PersonName->PersonFamilyName) > 0) {
             $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Body->Proposal->Agent);
-           print_r("Agent: " . $agent);
+           print_r("Agent: " . $agent . "\n");
 
         }
 
@@ -283,65 +283,71 @@ class SalesforceConnection
     private function CreateContact($Contact)
     {
 
-        $contactFields = ['FirstName' => htmlspecialchars($Contact->PersonName->PersonGivenName),
-        //    'LastName' => htmlspecialchars($Contact->PersonName->PersonFamilyName),
-            'Email' => htmlspecialchars($Contact->ContactDetails->Email->EmailAddress),
-            'Title' => htmlspecialchars($Contact->PersonName->PersonNameTitle),
-            'Preferred_Contact_Method__c' => htmlspecialchars($Contact->ContactDetails['PreferredContactMedium']),
-            'MailingStreet' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[0]) . ', ' . htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[1]),
-            'MailingCity' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[3]),
-            'Mailingstate' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[4]),
-            'MailingPostalCode' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->InternationalPostCode),
-            'Phone' => htmlspecialchars($Contact->ContactDetails->Telephone[0]->TelNationalNumber),
-            'MobilePhone' => htmlspecialchars($Contact->ContactDetails->Telephone[1]->TelNationalNumber)
-        ];
+        try{
+
+            $contactFields = ['FirstName' => htmlspecialchars($Contact->PersonName->PersonGivenName),
+            //    'LastName' => htmlspecialchars($Contact->PersonName->PersonFamilyName),
+                'Email' => htmlspecialchars($Contact->ContactDetails->Email->EmailAddress),
+                'Title' => htmlspecialchars($Contact->PersonName->PersonNameTitle),
+                'Preferred_Contact_Method__c' => htmlspecialchars($Contact->ContactDetails['PreferredContactMedium']),
+                'MailingStreet' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[0]) . ', ' . htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[1]),
+                'MailingCity' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[3]),
+                'Mailingstate' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->IntAddressLine[4]),
+                'MailingPostalCode' => htmlspecialchars($Contact->ExternalAddress->InternationalAddress->InternationalPostCode),
+                'Phone' => htmlspecialchars($Contact->ContactDetails->Telephone[0]->TelNationalNumber),
+                'MobilePhone' => htmlspecialchars($Contact->ContactDetails->Telephone[1]->TelNationalNumber)
+            ];
 
 
-        if (strlen($Contact->PersonName->PersonFamilyName) == 0) {
-          $contactFields['LastName'] = "Unknown";
-        }
-        elseif(strlen($Contact->PersonName->PersonFamilyName) > 0)
-        {
-          $contactFields['LastName'] = $Contact->PersonName->PersonFamilyName;
-        }
-
-
-        if (strlen($Contact->OrgName) > 0) {
-          $contactFields['AccountId'] = htmlspecialchars($this->CreateAccount($Contact->OrgName));
-        }
-
-        $sObject = new stdclass();
-        $sObject->fields = $contactFields;
-        $sObject->type = 'Contact';
-
-        if (strlen($contactFields['Email']) == 0) {
-            $SFResponce = $this->SFConnection->create(array($sObject));
-        } else {
-            $SFResponce = $this->SFConnection->upsert("Email", array($sObject));
-        }
-
-
-        //  If we have a contact ID return it, else return error
-        if ($SFResponce[0]->success == 1) {
-            return $SFResponce[0]->id;
-        }
-        else {
-            //  FIX: We might have tried an upsert as we had an email, however sometimes there are duplicate accounts in Salesforce with the same email address,
-            //  to fix this, we just need to do a basic insert - someone will clean up the duplicates later on.
-            $SFResponce = $this->SFConnection->create(array($sObject));
-
-            if ($SFResponce[0]->success == 1) {
-
-                return $SFResponce[0]->id;
-
-            } else {
-             print_r('OBJECT ------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>> \n' . $sObject);
-                return 'ERROR';
+            if (strlen($Contact->PersonName->PersonFamilyName) == 0) {
+              $contactFields['LastName'] = "Unknown";
+            }
+            elseif(strlen($Contact->PersonName->PersonFamilyName) > 0)
+            {
+              $contactFields['LastName'] = $Contact->PersonName->PersonFamilyName;
             }
 
-            print_r($SFResponce);
 
-            return 'ERROR';
+            if (strlen($Contact->OrgName) > 0) {
+              $contactFields['AccountId'] = htmlspecialchars($this->CreateAccount($Contact->OrgName));
+            }
+
+            $sObject = new stdclass();
+            $sObject->fields = $contactFields;
+            $sObject->type = 'Contact';
+
+            if (strlen($contactFields['Email']) == 0) {
+                $SFResponce = $this->SFConnection->create(array($sObject));
+            } else {
+                $SFResponce = $this->SFConnection->upsert("Email", array($sObject));
+            }
+
+
+            //  If we have a contact ID return it, else return error
+            if ($SFResponce[0]->success == 1) {
+                return $SFResponce[0]->id;
+            }
+            else {
+                //  FIX: We might have tried an upsert as we had an email, however sometimes there are duplicate accounts in Salesforce with the same email address,
+                //  to fix this, we just need to do a basic insert - someone will clean up the duplicates later on.
+                $SFResponce = $this->SFConnection->create(array($sObject));
+
+                if ($SFResponce[0]->success == 1) {
+
+                    return $SFResponce[0]->id;
+
+                } else {
+                 print_r('OBJECT ------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>> \n' . $sObject . '\n');
+                    return 'ERROR';
+                }
+
+                print_r($SFResponce);
+
+                return 'ERROR';
+            }
+        } catch (Exception $ex) {
+            print_r('Exception catched in CreateContact \n');
+            var_dump($ex->faultcode, $ex->faultstring, $ex->faultactor, $ex->detail, $ex->_name, $ex->headerfault);
         }
     }
 
@@ -388,42 +394,50 @@ class SalesforceConnection
     private function CreateUPRN($SiteLocation)
     {
 
-        $createFields = ['PostCode__c' => htmlspecialchars($SiteLocation->BS7666Address->PostCode),
-            'Street__c' => htmlspecialchars($SiteLocation->BS7666Address->StreetDescription),
-            'UPRN__c' => htmlspecialchars($SiteLocation->BS7666Address->UniquePropertyReferenceNumber),
-            'X_COORDINATE__c' => htmlspecialchars($SiteLocation->SiteGridRefence->X),
-            'Y_COORDINATE__c' => htmlspecialchars($SiteLocation->SiteGridRefence->Y)
+        try{
 
-        ];
+            $createFields = ['PostCode__c' => htmlspecialchars($SiteLocation->BS7666Address->PostCode),
+                'Street__c' => htmlspecialchars($SiteLocation->BS7666Address->StreetDescription),
+                'UPRN__c' => htmlspecialchars($SiteLocation->BS7666Address->UniquePropertyReferenceNumber),
+                'X_COORDINATE__c' => htmlspecialchars($SiteLocation->SiteGridRefence->X),
+                'Y_COORDINATE__c' => htmlspecialchars($SiteLocation->SiteGridRefence->Y)
 
-
-        print_r($SiteLocation);
-
-        $sObject = new stdclass();
-        $sObject->fields = $createFields;
-        $sObject->type = 'BasicLandPropertyUnit__c';
-
-        //  Upsert UPRN into BasicLandProperyUnit__c - if sucessfull return SF ID, ELSE return ERROR.
-        $upsertResponse = $this->SFConnection->upsert("UPRN__c", array($sObject));
+            ];
 
 
-        if ($upsertResponse[0]->success == 1) {
-            return $upsertResponse[0]->id;
-        } else {
+            print_r('Site Location : ' . $SiteLocation . "\n");
 
-            $createFields = ['temporal__c' => true];
-            $upsertResponse = $this->SFConnection->insert("UPRN__c", array($sObject));
+            $sObject = new stdclass();
+            $sObject->fields = $createFields;
+            $sObject->type = 'BasicLandPropertyUnit__c';
 
-            // create temp BLPU
+            //  Upsert UPRN into BasicLandProperyUnit__c - if sucessfull return SF ID, ELSE return ERROR.
+            $upsertResponse = $this->SFConnection->upsert("UPRN__c", array($sObject));
+
+
             if ($upsertResponse[0]->success == 1) {
                 return $upsertResponse[0]->id;
             } else {
-                print_r("Failed to Create UPRN for " . $SiteLocation);
+
+                $createFields = ['temporal__c' => true];
+                $upsertResponse = $this->SFConnection->insert("UPRN__c", array($sObject));
+
+                // create temp BLPU
+                if ($upsertResponse[0]->success == 1) {
+                    return $upsertResponse[0]->id;
+                } else {
+                    print_r("Failed to Create UPRN for " . $SiteLocation . "\n");
+                }
+
+
+                return 'ERROR';
             }
+        }catch(Exception $ex){
 
-
-            return 'ERROR';
+            print_r('Exception catched in CreateUPRN \n');
+            var_dump($ex->faultcode, $ex->faultstring, $ex->faultactor, $ex->detail, $ex->_name, $ex->headerfault);
         }
+
     }
 
     public function CheckCreation($Planning_Portal_Reference__c)
