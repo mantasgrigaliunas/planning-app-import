@@ -28,6 +28,10 @@ require_once 'inc/functions.php';
         print_r($filename);
     }
 
+    $dir = dirname('Application.xml');
+        echo "<p>Full path to this dir: " . $dir . "</p>";
+        echo "<p>Full path to a .htpasswd file in this dir: " . $dir . "/.htpasswd" . "</p>";
+
 
     print_r('Connected');
 
