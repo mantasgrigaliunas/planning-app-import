@@ -14,7 +14,6 @@ ini_set('max_execution_time', 300);  //300 seconds = 5 minutes
 require_once 'inc/SalesForceConnector.php';
 require_once 'inc/LogEntriesAPI/logentries.php';
 require_once 'inc/functions.php';
-require_once 'inc/SoapFault.php';
 
 
 // MAIN ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
