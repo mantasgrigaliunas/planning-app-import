@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proposal Version="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--$Id: 006_NamespaceFix.xsl 5610 2013-07-30 16:09:13Z andrewc $-->
+	<!--$Id: 005_DoCleanUpTasks.xsl 5500 2013-04-23 14:52:18Z andrewc $-->
+	<!--$Id: 004_CleanUpNodes.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
+	<!--$Id: 003_UnknownNodes.xsl 5548 2013-06-17 15:47:58Z andrewc $-->
+	<!--$Id: 002_IndicatorEmptyNodes.xsl 6028 2014-02-24 15:12:04Z dariuszh $-->
+	<!--$Id: 001_RemoveDataDescription.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
+	<!--$Id: 1.0-0.11.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
+	<!--$Id: 0.11-0.10.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
+	<ApplicationHeader>
+		<ApplicationTo>M3645                         </ApplicationTo>
+		<DateSubmitted>2015-03-16</DateSubmitted>
+		<RefNum>4051549</RefNum>
+		<FormattedRefNum>PP-04051549</FormattedRefNum>
+		<ApplicationVersion>1</ApplicationVersion>
+		<AttachmentsChanged>false</AttachmentsChanged>
+		<Description>birchleigh</Description>
+		<Payment>
+			<PaymentMethod>Cheque</PaymentMethod>
+			<AmountDue>172</AmountDue>
+			<AmountPaid>0</AmountPaid>
+			<Currency>GBP</Currency>
+		</Payment>
+		<IsValidApplication>true</IsValidApplication>
+	</ApplicationHeader>
+	<FileAttachments>
+		<FileAttachment href="">
+			<Identifier>22952373</Identifier>
+			<Size>328574</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>03-15(16-03-15).01pdf.pdf</FileName>
+			<PrintInformation>
+				<HasBeenPrinted>true</HasBeenPrinted>
+				<HasScale>true</HasScale>
+			</PrintInformation>
+			<Reference>Site &amp; other plans</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22952389</Identifier>
+			<Size>319068</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>03-15(16-03-15).02pdf.pdf</FileName>
+			<PrintInformation>
+				<HasBeenPrinted>true</HasBeenPrinted>
+				<HasScale>true</HasScale>
+			</PrintInformation>
+			<Reference>The location plan</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22952621</Identifier>
+			<Size>369542</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>ApplicationForm.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>Application Form</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22952632</Identifier>
+			<Size>369510</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>ApplicationFormNoPersonalData.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>Application Form - Without Personal Data</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22952635</Identifier>
+			<Size>7581</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>AttachmentSummary.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>A summary of the attachments in the proposal</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22952634</Identifier>
+			<Size>59071</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>FeeCalculation.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>How the fee was calculated</Reference>
+		</FileAttachment>
+	</FileAttachments>
+	<Applicant>
+		<PersonName>
+			<PersonNameTitle>Mr</PersonNameTitle>
+			<PersonGivenName>ATUL</PersonGivenName>
+			<PersonFamilyName>PATEL</PersonFamilyName>
+		</PersonName>
+		<ExternalAddress>
+			<InternationalAddress>
+				<IntAddressLine>Birchleigh, </IntAddressLine>
+				<IntAddressLine>Effingham Road</IntAddressLine>
+				<IntAddressLine/>
+				<IntAddressLine>Burstow</IntAddressLine>
+				<IntAddressLine>Surrey</IntAddressLine>
+				<Country>United Kingdom</Country>
+				<InternationalPostCode>RH6 9RP</InternationalPostCode>
+			</InternationalAddress>
+		</ExternalAddress>
+		<ContactDetails PreferredContactMedium="Telephone">
+			<Email EmailPreferred="no" EmailUsage="work">
+				<EmailAddress>ATUL@CAMELOTFOODS.CO.UK</EmailAddress>
+			</Email>
+			<Telephone TelMobile="no" TelPreferred="yes" TelUse="work">
+				<TelNationalNumber/>
+			</Telephone>
+			<Telephone TelMobile="yes" TelPreferred="no" TelUse="work">
+				<TelNationalNumber>07957447335</TelNationalNumber>
+				<TelCountryCode>44</TelCountryCode>
+			</Telephone>
+			<Fax FaxMobile="no" FaxPreferred="no" FaxUse="work">
+				<FaxNationalNumber/>
+			</Fax>
+		</ContactDetails>
+	</Applicant>
+	<Agent>
+		<PersonName>
+			<PersonNameTitle>Mr</PersonNameTitle>
+			<PersonGivenName>GRAHAM</PersonGivenName>
+			<PersonFamilyName>ROSS</PersonFamilyName>
+		</PersonName>
+		<OrgName>BUILDING PLAN DESIGN</OrgName>
+		<ExternalAddress>
+			<InternationalAddress>
+				<IntAddressLine>12  BARRIER REEF WAY</IntAddressLine>
+				<IntAddressLine/>
+				<IntAddressLine/>
+				<IntAddressLine>EASTBOURNE</IntAddressLine>
+				<IntAddressLine>East Sussex</IntAddressLine>
+				<InternationalPostCode>BN23 5PE</InternationalPostCode>
+				<Country>United Kingdom</Country>
+			</InternationalAddress>
+		</ExternalAddress>
+		<ContactDetails PreferredContactMedium="Telephone">
+			<Email EmailPreferred="no" EmailUsage="work">
+				<EmailAddress>buildingplan@btconnect.com</EmailAddress>
+			</Email>
+			<Telephone TelMobile="no" TelPreferred="yes" TelUse="work">
+				<TelNationalNumber>07832288814</TelNationalNumber>
+			</Telephone>
+			<Telephone TelMobile="yes" TelPreferred="no" TelUse="work">
+				<TelNationalNumber/>
+			</Telephone>
+			<Fax FaxMobile="no" FaxPreferred="no" FaxUse="work">
+				<FaxNationalNumber/>
+			</Fax>
+		</ContactDetails>
+	</Agent>
+	<SiteLocation>
+		<BS7666Address>
+			<PAON>
+				<StartRange>
+					<Number/>
+				</StartRange>
+				<Description>Birchleigh</Description>
+			</PAON>
+			<StreetDescription>Effingham Road</StreetDescription>
+			<Locality/>
+			<Town>Burstow</Town>
+			<AdministrativeArea>Surrey</AdministrativeArea>
+			<PostTown>Burstow</PostTown>
+			<PostCode>RH6 9RP</PostCode>
+			<UniquePropertyReferenceNumber>100062497934</UniquePropertyReferenceNumber>
+		</BS7666Address>
+		<SiteGridRefence>
+			<X>532458</X>
+			<Y>140827</Y>
+		</SiteGridRefence>
+	</SiteLocation>
+	<ApplicationScenario>
+		<ScenarioNumber>4</ScenarioNumber>
+	</ApplicationScenario>
+	<ConsentRegimes>
+		<ConsentRegime>Full</ConsentRegime>
+	</ConsentRegimes>
+	<ApplicationData>
+		<ProposalDescription>
+			<DescriptionText>PROPOSED DOUBLE STOREY REAR EXTENSIONS
+CHANGE OF USE FROM C2 TO SELF-CONTAINED FLATS</DescriptionText>
+			<ProposalState>
+				<ProposalStarted>0</ProposalStarted>
+				<ProposalCompleted>0</ProposalCompleted>
+			</ProposalState>
+		</ProposalDescription>
+		<SiteArea AreaUnit="sq.metres">857</SiteArea>
+		<ExistingUse>
+			<CurrentUse>C2</CurrentUse>
+			<IsCurrentlyVacant>0</IsCurrentlyVacant>
+			<LastUse>
+				<LastUseDescription/>
+				<LastUseEndDate>
+					<FullDate/>
+				</LastUseEndDate>
+			</LastUse>
+			<ContaminatedLandKnown>0</ContaminatedLandKnown>
+			<ContaminatedLandSuspect>0</ContaminatedLandSuspect>
+			<ContaminatedProposedUse>0</ContaminatedProposedUse>
+			<ConstructingNewBuilding/>
+		</ExistingUse>
+		<ResidentialDevelopment>
+			<DoesIncludeGainOrLoss>No</DoesIncludeGainOrLoss>
+			<Existing>
+				<Market>
+					<Total>0</Total>
+				</Market>
+				<SocialRented>
+					<Total>0</Total>
+				</SocialRented>
+				<Intermediate>
+					<Total>0</Total>
+				</Intermediate>
+				<KeyWorker>
+					<Total>0</Total>
+				</KeyWorker>
+				<Total>0</Total>
+			</Existing>
+			<Proposed>
+				<Market>
+					<Total>0</Total>
+				</Market>
+				<SocialRented>
+					<Total>0</Total>
+				</SocialRented>
+				<Intermediate>
+					<Total>0</Total>
+				</Intermediate>
+				<KeyWorker>
+					<Total>0</Total>
+				</KeyWorker>
+				<Total>0</Total>
+			</Proposed>
+		</ResidentialDevelopment>
+		<NonResidentialDevelopment AreaUnit="">
+			<DoesIncludeGainOrLoss>Yes</DoesIncludeGainOrLoss>
+			<A1>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</A1>
+			<A2>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</A2>
+			<A3>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</A3>
+			<A4>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</A4>
+			<A5>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</A5>
+			<B1A>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</B1A>
+			<B1B>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</B1B>
+			<B1C>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</B1C>
+			<B2>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</B2>
+			<B8>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</B8>
+			<C1>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+				<RoomInformation>
+					<ExistingRoomsToBeLost>0</ExistingRoomsToBeLost>
+					<TotalRoomsProposed>0</TotalRoomsProposed>
+					<NetAdditionalRooms>0</NetAdditionalRooms>
+				</RoomInformation>
+			</C1>
+			<C2>
+				<ExistingGrossFloorspace>233.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>233.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>-233.0</NetAdditionalGrossFloorspace>
+				<RoomInformation>
+					<ExistingRoomsToBeLost>0</ExistingRoomsToBeLost>
+					<TotalRoomsProposed>0</TotalRoomsProposed>
+					<NetAdditionalRooms>0</NetAdditionalRooms>
+				</RoomInformation>
+			</C2>
+			<D1>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</D1>
+			<D2>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>0.0</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>0.0</NetAdditionalGrossFloorspace>
+			</D2>
+			<Other>
+				<ExistingGrossFloorspace>0.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>0.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>291.5</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>291.5</NetAdditionalGrossFloorspace>
+				<RoomInformation>
+					<ExistingRoomsToBeLost>0</ExistingRoomsToBeLost>
+					<TotalRoomsProposed>0</TotalRoomsProposed>
+					<NetAdditionalRooms>0</NetAdditionalRooms>
+				</RoomInformation>
+			</Other>
+			<Totals>
+				<ExistingGrossFloorspace>233.0</ExistingGrossFloorspace>
+				<GrossFloorspaceToBeLost>233.0</GrossFloorspaceToBeLost>
+				<TotalGrossFloorspaceProposed>291.5</TotalGrossFloorspaceProposed>
+				<NetAdditionalGrossFloorspace>58.5</NetAdditionalGrossFloorspace>
+			</Totals>
+		</NonResidentialDevelopment>
+		<Employment>
+			<Existing>
+				<FullTime>0</FullTime>
+				<PartTime>0</PartTime>
+				<Total>0.0</Total>
+			</Existing>
+			<Proposed>
+				<FullTime>0</FullTime>
+				<PartTime>0</PartTime>
+				<Total>0.0</Total>
+			</Proposed>
+		</Employment>
+		<Hours>
+			<A1>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</A1>
+			<A2>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</A2>
+			<A3>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</A3>
+			<A4>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</A4>
+			<A5>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</A5>
+			<B1A>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</B1A>
+			<B1B>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</B1B>
+			<B1C>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</B1C>
+			<B2>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</B2>
+			<B8>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</B8>
+			<C1>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</C1>
+			<C2>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</C2>
+			<C3>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</C3>
+			<D1>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</D1>
+			<D2>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</D2>
+			<Other>
+				<MonToFri>
+					<StartTime/>
+					<StopTime/>
+				</MonToFri>
+				<Sat>
+					<StartTime/>
+					<StopTime/>
+				</Sat>
+				<SunBH>
+					<StartTime/>
+					<StopTime/>
+				</SunBH>
+			</Other>
+		</Hours>
+		<IndustrialCommercial>
+			<IsProposalWasteManagementDevelopment>0</IsProposalWasteManagementDevelopment>
+			<ProcessesAndProducts>N/A</ProcessesAndProducts>
+			<WasteManagementDetails>
+				<InertLandfill>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</InertLandfill>
+				<NonHazardousLandfill>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</NonHazardousLandfill>
+				<HazardousLandfill>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</HazardousLandfill>
+				<WasteIncinerationEnergy>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</WasteIncinerationEnergy>
+				<OtherIncineration>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</OtherIncineration>
+				<LandfillGasGenerationPlant>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</LandfillGasGenerationPlant>
+				<PyrolysisGasification>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</PyrolysisGasification>
+				<MetalRecyclingSite>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</MetalRecyclingSite>
+				<TransferStations>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</TransferStations>
+				<MaterialRecoveryFacilities>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</MaterialRecoveryFacilities>
+				<HouseholdCivicAmenitySites>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</HouseholdCivicAmenitySites>
+				<OpenWindrowComposting>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</OpenWindrowComposting>
+				<InvesselComposting>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</InvesselComposting>
+				<AnaerobicDigestion>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</AnaerobicDigestion>
+				<MBTTreatment>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</MBTTreatment>
+				<SewageTreatmentWorks>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</SewageTreatmentWorks>
+				<OtherTreatment>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</OtherTreatment>
+				<RecyclingFacilitiesCDEWaste>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</RecyclingFacilitiesCDEWaste>
+				<StorageOfWaste>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</StorageOfWaste>
+				<OtherWasteManagement>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</OtherWasteManagement>
+				<OtherDevelopments>
+					<TotalVoidCapacity VolumeUnit=""/>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</OtherDevelopments>
+			</WasteManagementDetails>
+			<WasteStreamDetails>
+				<Municipal>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</Municipal>
+				<ConstructionDemolitionExcavation>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</ConstructionDemolitionExcavation>
+				<CommercialIndustrial>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</CommercialIndustrial>
+				<Hazardous>
+					<MaxAnnualOperationalThroughput VolumeUnit=""/>
+				</Hazardous>
+			</WasteStreamDetails>
+		</IndustrialCommercial>
+		<HazardousSubstances>
+			<IsUseStorageFollowingMaterials>No</IsUseStorageFollowingMaterials>
+			<Substance>
+				<SubstanceName>C. Select Value</SubstanceName>
+				<SubstanceQuantity VolumeUnit="tonnes">.0</SubstanceQuantity>
+			</Substance>
+			<Substance>
+				<SubstanceName>A. Select Value</SubstanceName>
+				<SubstanceQuantity VolumeUnit="tonnes">.0</SubstanceQuantity>
+			</Substance>
+			<Substance>
+				<SubstanceName>B. Select Value</SubstanceName>
+				<SubstanceQuantity VolumeUnit="tonnes">.0</SubstanceQuantity>
+			</Substance>
+			<Substance>
+				<SubstanceName>C. Select Value</SubstanceName>
+				<SubstanceQuantity VolumeUnit="tonnes">.0</SubstanceQuantity>
+			</Substance>
+		</HazardousSubstances>
+		<TradeEffluent>
+			<DisposeTradeWaste>No</DisposeTradeWaste>
+		</TradeEffluent>
+		<Access>
+			<NewAlteredVehicular>No</NewAlteredVehicular>
+			<NewAlteredPedestrian>No</NewAlteredPedestrian>
+			<NewRightsOfWay>No</NewRightsOfWay>
+			<NewPublicRoad>No</NewPublicRoad>
+			<ChangeRightsOfWay>No</ChangeRightsOfWay>
+		</Access>
+		<Parking>
+			<FullParking>
+				<Cars>
+					<Existing>4</Existing>
+					<New>7</New>
+					<Difference>3</Difference>
+				</Cars>
+				<GoodsVehicle>
+					<Existing>0</Existing>
+					<New>0</New>
+					<Difference>0</Difference>
+				</GoodsVehicle>
+				<Motorcycle>
+					<Existing>0</Existing>
+					<New>0</New>
+					<Difference>0</Difference>
+				</Motorcycle>
+				<Disability>
+					<Existing>0</Existing>
+					<New>0</New>
+					<Difference>0</Difference>
+				</Disability>
+				<Cycle>
+					<Existing>0</Existing>
+					<New>0</New>
+					<Difference>0</Difference>
+				</Cycle>
+				<OtherVehicle>
+					<VehicleTotals>
+						<Existing>0</Existing>
+						<New>0</New>
+						<Difference>0</Difference>
+					</VehicleTotals>
+				</OtherVehicle>
+			</FullParking>
+		</Parking>
+		<Materials>
+			<Roof>
+				<Existing>CONCRETE PLAIN TILES</Existing>
+				<Proposed>TO MATCH EXISTING</Proposed>
+				<NotApplicable/>
+				<DontKnow/>
+			</Roof>
+			<Windows>
+				<Existing>WHITE UPVC</Existing>
+				<Proposed>TO MATCH EXISTING</Proposed>
+				<NotApplicable/>
+				<DontKnow/>
+			</Windows>
+			<Boundaries>
+				<NotApplicable/>
+				<DontKnow/>
+			</Boundaries>
+			<VehicleAccess>
+				<Existing>EXISTING DOUBLE GARAGE TO BE DEMOLISHED</Existing>
+				<Proposed>7 CAR PARK SPACES TO BE CREATED ON SHINGLE HARDSTANDING</Proposed>
+				<NotApplicable/>
+				<DontKnow/>
+			</VehicleAccess>
+			<Lighting>
+				<NotApplicable/>
+				<DontKnow/>
+			</Lighting>
+			<ExternalWalls>
+				<Existing>BRICKWORK</Existing>
+				<Proposed>TO MATCH EXISTING</Proposed>
+				<NotApplicable/>
+				<DontKnow/>
+			</ExternalWalls>
+			<ExternalDoors>
+				<Existing>WHITE UPVC</Existing>
+				<Proposed>TO MATCH EXISTING</Proposed>
+				<NotApplicable/>
+				<DontKnow/>
+			</ExternalDoors>
+			<Other>
+				<NotApplicable/>
+				<DontKnow/>
+				<SpecifiedOther OtherCode=""/>
+			</Other>
+			<SupportingInformation>
+				<AdditionalInformation>0</AdditionalInformation>
+			</SupportingInformation>
+		</Materials>
+		<FoulSewage>
+			<Disposal>
+				<MainsSewer>1</MainsSewer>
+				<SpecifiedOther OtherCode=""/>
+			</Disposal>
+			<ConnectExistingDrainage>No</ConnectExistingDrainage>
+		</FoulSewage>
+		<FloodRisk>
+			<SiteInFloodRiskArea>No</SiteInFloodRiskArea>
+			<FloodRiskTable/>
+			<ProposalNearWatercourse>0</ProposalNearWatercourse>
+			<ProposalIncreaseFloodrisk>0</ProposalIncreaseFloodrisk>
+			<SurfaceWaterDischarge>
+				<SustainableDrainage>0</SustainableDrainage>
+				<Soakaway>1</Soakaway>
+				<MainSewer>0</MainSewer>
+				<ExistingWatercourse>0</ExistingWatercourse>
+				<PondLake>0</PondLake>
+			</SurfaceWaterDischarge>
+		</FloodRisk>
+		<AllTreesHedges>
+			<FullTreesHedges>
+				<TreesHedgesOnSite>0</TreesHedgesOnSite>
+				<TreesHedgesAdjacent>0</TreesHedgesAdjacent>
+			</FullTreesHedges>
+		</AllTreesHedges>
+		<WasteStorageCollection>
+			<StoreCollectWaste>Yes</StoreCollectWaste>
+			<StoreCollectDetails>REFUSE STORES PROVIDED</StoreCollectDetails>
+			<StoreCollectRecyclableWaste>Yes</StoreCollectRecyclableWaste>
+			<StoreCollectRecyclableWasteDetails>AT REFUSE STORES </StoreCollectRecyclableWasteDetails>
+		</WasteStorageCollection>
+		<Advice>
+			<HaveSoughtAdvice>0</HaveSoughtAdvice>
+			<AdviceDetails>
+				<ns1:FullContactDetailsNotKnown xmlns:ns1="'http://www.govtalk.gov.uk/planning/OneAppCommon-2006'"/>
+			</AdviceDetails>
+		</Advice>
+		<SiteVisit>
+			<SeeSite>1</SeeSite>
+			<VisitContactDetails>
+				<ContactOther>
+					<PersonName>
+						<PersonFamilyName/>
+					</PersonName>
+					<ContactDetails PreferredContactMedium="Telephone">
+						<Email EmailPreferred="no" EmailUsage="home">
+							<EmailAddress/>
+						</Email>
+						<Telephone TelMobile="no" TelPreferred="yes" TelUse="work">
+							<TelNationalNumber/>
+						</Telephone>
+					</ContactDetails>
+				</ContactOther>
+				<ContactApplicant/>
+			</VisitContactDetails>
+		</SiteVisit>
+		<OwnershipCertificates>
+			<CertificateSelected>CertificateA</CertificateSelected>
+			<NoticeGiven>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+			</NoticeGiven>
+			<Advertisement>
+				<AdvertDate/>
+				<PublicationName/>
+			</Advertisement>
+			<OwnershipDeclaration>
+				<DeclarationDate>2015-03-16</DeclarationDate>
+				<DeclarationMade>1</DeclarationMade>
+				<Signatory PersonRole="Applicant">
+					<PersonNameTitle>Mr</PersonNameTitle>
+					<PersonGivenName>ATUL</PersonGivenName>
+					<PersonFamilyName>PATEL</PersonFamilyName>
+				</Signatory>
+			</OwnershipDeclaration>
+		</OwnershipCertificates>
+		<Biodiversity>
+			<ProtectedPrioritySpecies>
+				<No/>
+			</ProtectedPrioritySpecies>
+			<DesignatedSites>
+				<No/>
+			</DesignatedSites>
+			<GeologicalConservationImportance>
+				<No/>
+			</GeologicalConservationImportance>
+		</Biodiversity>
+	</ApplicationData>
+	<DeclarationOfInterest>
+		<IsRelated>0</IsRelated>
+	</DeclarationOfInterest>
+	<Declaration>
+		<DeclarationDate>2015-03-16</DeclarationDate>
+		<DeclarationMade>1</DeclarationMade>
+	</Declaration>
+</Proposal>
