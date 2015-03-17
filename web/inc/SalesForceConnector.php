@@ -394,6 +394,8 @@ class SalesforceConnection
     private function CreateUPRN($SiteLocation)
     {
 
+         print_r('Site Location : ' . $SiteLocation . "\n");
+
         try{
 
             $createFields = ['PostCode__c' => htmlspecialchars($SiteLocation->BS7666Address->PostCode),
@@ -403,9 +405,6 @@ class SalesforceConnection
                 'Y_COORDINATE__c' => htmlspecialchars($SiteLocation->SiteGridRefence->Y)
 
             ];
-
-
-            print_r('Site Location : ' . $SiteLocation . "\n");
 
             $sObject = new stdclass();
             $sObject->fields = $createFields;
