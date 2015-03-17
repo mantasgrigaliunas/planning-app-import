@@ -23,14 +23,8 @@ require_once 'inc/functions.php';
     //$PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
     $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
-    foreach(glob("app/*xml") as $filename) {
-        $xml_file = file_get_contents($filename, FILE_TEXT);
-        print_r($filename);
-    }
-
-    $dir = dirname('Application.xml');
-        echo "<p>Full path to this dir: " . $dir . "</p>";
-        echo "<p>Full path to a .htpasswd file in this dir: " . $dir . "/.htpasswd" . "</p>";
+    $xml=simplexml_load_file("Application.xml") or die("Error: Cannot create object");
+    print_r($xml);
 
 
     print_r('Connected');
