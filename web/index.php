@@ -28,7 +28,7 @@ try{
 
     print_r($applicationInformation . "<br\>");
 
-    $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
+    //$SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
 }catch (Exception $ex) {
 
