@@ -184,18 +184,18 @@ class SalesforceConnection
     public function CreatePlanningApplication($applicationInformation)
     {#
         echo('Applicant:: ' . $applicationInformation->Applicant . "\n");
-        $applicant = $this->CreateContact($applicationInformation->Body->Proposal->Applicant);
+        $applicant = $this->CreateContact($applicationInformation->Applicant);
         echo("Applicant: " . $applicant . "\n");
 
-        $UPRN = $this->CreateUPRN($applicationInformation->Body->Proposal->SiteLocation);
+        $UPRN = $this->CreateUPRN($applicationInformation->SiteLocation);
         echo("UPRN: " . $UPRN . "\n");
 
 
         //  Some application are bloody fussy, and require different descriptions, set the description for the fussy types, else put instructions for council staff to complete.
 
         // Adverts
-        if (isset($applicationInformation->Body->Proposal->ApplicationData->Advert->AdvertDescription)) {
-            $advertDescriptions = $applicationSalesForceDescription = $applicationInformation->Body->Proposal->ApplicationData->Advert->AdvertDescription;
+        if (isset($applicationInformation->ApplicationData->Advert->AdvertDescription)) {
+            $advertDescriptions = $applicationSalesForceDescription = $applicationInformation->ApplicationData->Advert->AdvertDescription;
 
             foreach ($advertDescriptions as $advert) {
                 $applicationSalesForceDescription = "";
@@ -203,11 +203,11 @@ class SalesforceConnection
             }
 
         } // LDC
-        else if (isset($applicationInformation->Body->Proposal->ApplicationData->CertificateLawfulness->ExistingUseApplication->DescriptionCEU)) {
-            $applicationSalesForceDescription = $applicationInformation->Body->Proposal->ApplicationData->CertificateLawfulness->ExistingUseApplication->DescriptionCEU;
+        else if (isset($applicationInformation->ApplicationData->CertificateLawfulness->ExistingUseApplication->DescriptionCEU)) {
+            $applicationSalesForceDescription = $applicationInformation->ApplicationData->CertificateLawfulness->ExistingUseApplication->DescriptionCEU;
         } //  Tree preservation order :)
-        else if (isset($applicationInformation->Body->Proposal->ApplicationData->Trees->TreeDetails)) {
-            $preservationOrder = $applicationInformation->Body->Proposal->ApplicationData->Trees->TreeDetails;
+        else if (isset($applicationInformation->ApplicationData->Trees->TreeDetails)) {
+            $preservationOrder = $applicationInformation->ApplicationData->Trees->TreeDetails;
 
             foreach ($preservationOrder as $tpo) {
                 $applicationSalesForceDescription = "";
@@ -215,13 +215,13 @@ class SalesforceConnection
             }
         }
         //  For Planning Portal Application type 'Approval of details reserved by condition' the path for description is
-        elseif (isset($applicationInformation->Body->Proposal->ApplicationData->Conditions->ConditionsDescription->DescriptionText))
+        elseif (isset($applicationInformation->ApplicationData->Conditions->ConditionsDescription->DescriptionText))
         {
-          $applicationSalesForceDescription = $applicationInformation->Body->Proposal->ApplicationData->Conditions->ConditionsDescription->DescriptionText;
+          $applicationSalesForceDescription = $applicationInformation->ApplicationData->Conditions->ConditionsDescription->DescriptionText;
         }
         //  General Application
-        else if (isset($applicationInformation->Body->Proposal->ApplicationData->ProposalDescription->DescriptionText)) {
-            $applicationSalesForceDescription = $applicationInformation->Body->Proposal->ApplicationData->ProposalDescription->DescriptionText;
+        else if (isset($applicationInformation->ApplicationData->ProposalDescription->DescriptionText)) {
+            $applicationSalesForceDescription = $applicationInformation->ApplicationData->ProposalDescription->DescriptionText;
         } else {
             $applicationSalesForceDescription = "Application description not found, please update from application document";
         }
@@ -230,13 +230,13 @@ class SalesforceConnection
             'Applicant__c' => htmlspecialchars($applicant),
             'UPRN__c' => htmlspecialchars($UPRN),
             'Proposal__c' => htmlspecialchars($applicationSalesForceDescription),
-            'CreatedDate__c' => htmlspecialchars($applicationInformation->Body->Proposal->ApplicationHeader->DateSubmitted),
-            'Planning_Portal_Reference__c' => htmlspecialchars($applicationInformation->Body->Proposal->ApplicationHeader->FormattedRefNum),
-            'RecordTypeId' => htmlspecialchars($this->CalculateApplicationType($applicationInformation->Body->Proposal->ApplicationScenario->ScenarioNumber))
+            'CreatedDate__c' => htmlspecialchars($applicationInformation->ApplicationHeader->DateSubmitted),
+            'Planning_Portal_Reference__c' => htmlspecialchars($applicationInformation->ApplicationHeader->FormattedRefNum),
+            'RecordTypeId' => htmlspecialchars($this->CalculateApplicationType($applicationInformation->ApplicationScenario->ScenarioNumber))
         ];
 
-        if (strlen($applicationInformation->Body->Proposal->Agent->PersonName->PersonFamilyName) > 0) {
-            $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Body->Proposal->Agent);
+        if (strlen($applicationInformation->Agent->PersonName->PersonFamilyName) > 0) {
+            $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Agent);
            print_r("Agent: " . $agent . "\n");
 
         }
@@ -253,7 +253,7 @@ class SalesforceConnection
         if ($upsertResponse[0]->success == 1) {
             return $upsertResponse[0]->id;
         } else {
-            print_r("Error - Could not insert Planning Application: " . $applicationInformation->Body->Proposal->ApplicationHeader->FormattedRefNum);
+            print_r("Error - Could not insert Planning Application: " . $applicationInformation->ApplicationHeader->FormattedRefNum);
             return 'ERROR';
         }
     }
