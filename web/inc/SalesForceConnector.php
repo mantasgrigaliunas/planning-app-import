@@ -183,12 +183,12 @@ class SalesforceConnection
 
     public function CreatePlanningApplication($applicationInformation)
     {#
-        echo('Applicant:: ' . $applicationInformation->Applicant . "\n");
+        echo('Applicant:: ' . $applicationInformation->Applicant . "<br>");
         $applicant = $this->CreateContact($applicationInformation->Applicant);
-        echo("Applicant: " . $applicant . "\n");
+        echo("Applicant: " . $applicant . "<br>");
 
         $UPRN = $this->CreateUPRN($applicationInformation->SiteLocation);
-        echo("UPRN: " . $UPRN . "\n");
+        echo("UPRN: " . $UPRN ."<br>");
 
 
         //  Some application are bloody fussy, and require different descriptions, set the description for the fussy types, else put instructions for council staff to complete.
@@ -237,7 +237,7 @@ class SalesforceConnection
 
         if (strlen($applicationInformation->Agent->PersonName->PersonFamilyName) > 0) {
             $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Agent);
-           print_r("Agent: " . $agent . "\n");
+           print_r("Agent: " . $agent . "<br>");
 
         }
 
@@ -273,7 +273,7 @@ class SalesforceConnection
         //  If we have a contact ID return it, else return error
         if ($SFResponce[0]->success == 1) {
 
-          print_r('Salesforce RESPONSE: ------>>>>>>>>>>>>>>>>> \n' . $SFResponce);
+          print_r('Salesforce RESPONSE: ------>>>>>>>>>>>>>>>>> <br>' . $SFResponce);
 
             return $SFResponce[0]->id;
         } else {
@@ -338,7 +338,7 @@ class SalesforceConnection
                     return $SFResponce[0]->id;
 
                 } else {
-                 print_r('OBJECT ------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>> \n' . $sObject . '\n');
+                 print_r('OBJECT ------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>> <br>' . $sObject . '<br>');
                     return 'ERROR';
                 }
 
@@ -347,7 +347,7 @@ class SalesforceConnection
                 return 'ERROR';
             }
         } catch (Exception $ex) {
-            print_r('Exception catched in CreateContact \n');
+            print_r('Exception catched in CreateContact <br>');
             var_dump($ex->faultcode, $ex->faultstring, $ex->faultactor, $ex->detail, $ex->_name, $ex->headerfault);
         }
     }
@@ -395,7 +395,7 @@ class SalesforceConnection
     private function CreateUPRN($SiteLocation)
     {
 
-         print_r('Site Location : ' . $SiteLocation . "\n");
+         print_r('Site Location : ' . $SiteLocation . "<br>");
 
         try{
 
@@ -426,7 +426,7 @@ class SalesforceConnection
                 if ($upsertResponse[0]->success == 1) {
                     return $upsertResponse[0]->id;
                 } else {
-                    print_r("Failed to Create UPRN for " . $SiteLocation . "\n");
+                    print_r("Failed to Create UPRN for " . $SiteLocation . "<br>");
                 }
 
 
@@ -434,7 +434,7 @@ class SalesforceConnection
             }
         }catch(Exception $ex){
 
-            print_r('Exception catched in CreateUPRN \n');
+            print_r('Exception catched in CreateUPRN <br>');
             var_dump($ex->faultcode, $ex->faultstring, $ex->faultactor, $ex->detail, $ex->_name, $ex->headerfault);
         }
 
