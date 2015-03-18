@@ -26,6 +26,8 @@ try{
 
     $applicationInformation = simplexml_load_file($url) or die("Error: Cannot create object");
 
+    print__r $applicationInformation . "\t\n";
+
     $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
 }catch (Exception $ex) {
