@@ -28,7 +28,7 @@ require_once 'inc/functions.php';
 
     print_r($applicationInformation);
 
-    //$SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
+    $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
 /*}catch (Exception $ex) {
 
