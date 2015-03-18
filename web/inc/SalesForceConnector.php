@@ -183,7 +183,7 @@ class SalesforceConnection
 
     public function CreatePlanningApplication($applicationInformation)
     {#
-        echo('Applicant:: ' . $applicationInformation->Body->Proposal->Applicant . "\n");
+        echo('Applicant:: ' . $applicationInformation->Applicant . "\n");
         $applicant = $this->CreateContact($applicationInformation->Body->Proposal->Applicant);
         echo("Applicant: " . $applicant . "\n");
 
