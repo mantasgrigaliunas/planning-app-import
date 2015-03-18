@@ -24,7 +24,7 @@ try{
     //$PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
     $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
-    $plannin = simplexml_load_file($url) or die("Error: Cannot create object");
+    $applicationInformation = simplexml_load_file($url) or die("Error: Cannot create object");
 
     $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
