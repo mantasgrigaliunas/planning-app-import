@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proposal Version="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<oneapp:SchemaVersion xmlns:oneapp="http://www.govtalk.gov.uk/planning/OneAppProposal-2006">0.10</oneapp:SchemaVersion>
+	<ApplicationHeader>
+		<ApplicationTo>M3645                         </ApplicationTo>
+		<DateSubmitted>2015-03-17</DateSubmitted>
+		<RefNum>4041230</RefNum>
+		<FormattedRefNum>PP-04041230</FormattedRefNum>
+		<ApplicationVersion>1</ApplicationVersion>
+		<AttachmentsChanged>false</AttachmentsChanged>
+		<Description>23 Doctors Lane</Description>
+		<Payment>
+			<PaymentMethod>Cheque</PaymentMethod>
+			<AmountDue>195</AmountDue>
+			<AmountPaid>0</AmountPaid>
+			<Currency>GBP</Currency>
+		</Payment>
+		<IsValidApplication>true</IsValidApplication>
+	</ApplicationHeader>
+	<FileAttachments>
+		<FileAttachment href="">
+			<Identifier>22973257</Identifier>
+			<Size>351945</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>ApplicationForm.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>Application Form</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22973259</Identifier>
+			<Size>351945</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>ApplicationFormNoPersonalData.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>Application Form - Without Personal Data</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22973261</Identifier>
+			<Size>7628</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>AttachmentSummary.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>A summary of the attachments in the proposal</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22965779</Identifier>
+			<Size>18709</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>BlockPlanofthesite_included_in_PlanningStatement.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>Block plan of the site</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22973260</Identifier>
+			<Size>56511</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>FeeCalculation.pdf</FileName>
+			<PrintInformation>
+				<PaperSize>
+					<StandardSize>A4</StandardSize>
+				</PaperSize>
+				<HasBeenPrinted>false</HasBeenPrinted>
+				<HasScale>false</HasScale>
+			</PrintInformation>
+			<Reference>How the fee was calculated</Reference>
+		</FileAttachment>
+		<FileAttachment href="">
+			<Identifier>22965780</Identifier>
+			<Size>1140955</Size>
+			<MimeType>application/pdf</MimeType>
+			<FileName>Planning as proposed rev b.pdf</FileName>
+			<PrintInformation>
+				<HasBeenPrinted>true</HasBeenPrinted>
+				<HasScale>true</HasScale>
+			</PrintInformation>
+			<Reference>Planning statement</Reference>
+		</FileAttachment>
+	</FileAttachments>
+	<Applicant>
+		<PersonName>
+			<PersonNameTitle>Mr &amp; Mrs</PersonNameTitle>
+			<PersonGivenName>M </PersonGivenName>
+			<PersonFamilyName>Jones</PersonFamilyName>
+		</PersonName>
+		<ExternalAddress>
+			<InternationalAddress>
+				<IntAddressLine>23 </IntAddressLine>
+				<IntAddressLine>Doctors Lane</IntAddressLine>
+				<IntAddressLine/>
+				<IntAddressLine>Chaldon</IntAddressLine>
+				<IntAddressLine>Surrey</IntAddressLine>
+				<Country>United Kingdom</Country>
+				<InternationalPostCode>CR3 5AE</InternationalPostCode>
+			</InternationalAddress>
+		</ExternalAddress>
+		<ContactDetails PreferredContactMedium="Telephone">
+			<Email EmailPreferred="no" EmailUsage="work">
+				<EmailAddress/>
+			</Email>
+			<Telephone TelMobile="no" TelPreferred="yes" TelUse="work">
+				<TelNationalNumber/>
+			</Telephone>
+			<Telephone TelMobile="yes" TelPreferred="no" TelUse="work">
+				<TelNationalNumber/>
+			</Telephone>
+			<Fax FaxMobile="no" FaxPreferred="no" FaxUse="work">
+				<FaxNationalNumber/>
+			</Fax>
+		</ContactDetails>
+	</Applicant>
+	<Agent>
+		<PersonName>
+			<PersonNameTitle>Mr</PersonNameTitle>
+			<PersonGivenName>Richard</PersonGivenName>
+			<PersonFamilyName>Humphreys</PersonFamilyName>
+		</PersonName>
+		<OrgName>R A Humphreys</OrgName>
+		<ExternalAddress>
+			<InternationalAddress>
+				<IntAddressLine>Firbank</IntAddressLine>
+				<IntAddressLine>Eyhurst Close</IntAddressLine>
+				<IntAddressLine/>
+				<IntAddressLine>Kingswood</IntAddressLine>
+				<IntAddressLine>Surrey</IntAddressLine>
+				<InternationalPostCode>KT20 6NR</InternationalPostCode>
+				<Country/>
+			</InternationalAddress>
+		</ExternalAddress>
+		<ContactDetails PreferredContactMedium="Telephone">
+			<Email EmailPreferred="no" EmailUsage="work">
+				<EmailAddress>humphreysplanning@dsl.pipex.com</EmailAddress>
+			</Email>
+			<Telephone TelMobile="no" TelPreferred="yes" TelUse="work">
+				<TelNationalNumber>01737 831218</TelNationalNumber>
+			</Telephone>
+			<Telephone TelMobile="yes" TelPreferred="no" TelUse="work">
+				<TelNationalNumber/>
+			</Telephone>
+			<Fax FaxMobile="no" FaxPreferred="no" FaxUse="work">
+				<FaxNationalNumber/>
+			</Fax>
+		</ContactDetails>
+	</Agent>
+	<SiteLocation>
+		<BS7666Address>
+			<PAON>
+				<StartRange>
+					<Number>23</Number>
+				</StartRange>
+				<EndRange/>
+			</PAON>
+			<StreetDescription>Doctors Lane</StreetDescription>
+			<Locality/>
+			<Town>Chaldon</Town>
+			<AdministrativeArea>Surrey</AdministrativeArea>
+			<PostTown>Chaldon</PostTown>
+			<PostCode>CR3 5AE</PostCode>
+			<UniquePropertyReferenceNumber>100061571173</UniquePropertyReferenceNumber>
+		</BS7666Address>
+		<SiteGridRefence>
+			<X>531367</X>
+			<Y>155413</Y>
+		</SiteGridRefence>
+	</SiteLocation>
+	<ApplicationScenario>
+		<ScenarioNumber>25</ScenarioNumber>
+	</ApplicationScenario>
+	<ConsentRegimes>
+		<ConsentRegime>Reserved Matters</ConsentRegime>
+	</ConsentRegimes>
+	<ApplicationData>
+		<NonResidentialDevelopment AreaUnit="">
+			<C1>
+				<ExistingGrossFloorspace/>
+				<GrossFloorspaceToBeLost/>
+				<TotalGrossFloorspaceProposed/>
+				<NetAdditionalGrossFloorspace/>
+				<RoomInformation>
+					<ExistingRoomsToBeLost/>
+					<TotalRoomsProposed/>
+					<NetAdditionalRooms/>
+				</RoomInformation>
+			</C1>
+			<C2>
+				<ExistingGrossFloorspace/>
+				<GrossFloorspaceToBeLost/>
+				<TotalGrossFloorspaceProposed/>
+				<NetAdditionalGrossFloorspace/>
+				<RoomInformation>
+					<ExistingRoomsToBeLost/>
+					<TotalRoomsProposed/>
+					<NetAdditionalRooms/>
+				</RoomInformation>
+			</C2>
+			<Other>
+				<ExistingGrossFloorspace/>
+				<GrossFloorspaceToBeLost/>
+				<TotalGrossFloorspaceProposed/>
+				<NetAdditionalGrossFloorspace/>
+				<RoomInformation>
+					<ExistingRoomsToBeLost/>
+					<TotalRoomsProposed/>
+					<NetAdditionalRooms/>
+				</RoomInformation>
+			</Other>
+		</NonResidentialDevelopment>
+		<Advice>
+			<HaveSoughtAdvice>0</HaveSoughtAdvice>
+			<AdviceDetails>
+			</AdviceDetails>
+		</Advice>
+		<SiteVisit>
+			<SeeSite>1</SeeSite>
+			<VisitContactDetails>
+				<ContactOther>
+					<PersonName>
+						<PersonFamilyName/>
+					</PersonName>
+					<ContactDetails PreferredContactMedium="Telephone">
+						<Email EmailPreferred="no" EmailUsage="home">
+							<EmailAddress/>
+						</Email>
+						<Telephone TelMobile="no" TelPreferred="yes" TelUse="work">
+							<TelNationalNumber/>
+						</Telephone>
+					</ContactDetails>
+				</ContactOther>
+				<ContactAgent/>
+			</VisitContactDetails>
+		</SiteVisit>
+		<OwnershipCertificates>
+			<CertificateSelected>CertificateA</CertificateSelected>
+			<NoticeGiven>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+				<NoticeGivenTo>
+					<NoticeRecipient>
+						<NoticeRecipientPerson>
+							<PersonFamilyName/>
+						</NoticeRecipientPerson>
+						<NoticeRecipientAddress>
+							<PAON>
+								<StartRange>
+									<Number/>
+								</StartRange>
+							</PAON>
+							<StreetDescription/>
+							<Locality/>
+						</NoticeRecipientAddress>
+					</NoticeRecipient>
+					<NoticeGivenDate/>
+				</NoticeGivenTo>
+			</NoticeGiven>
+			<Advertisement>
+				<AdvertDate/>
+				<PublicationName/>
+			</Advertisement>
+			<OwnershipDeclaration>
+				<DeclarationDate>2015-03-12</DeclarationDate>
+				<DeclarationMade>1</DeclarationMade>
+				<Signatory PersonRole="Agent">
+					<PersonNameTitle>Mr</PersonNameTitle>
+					<PersonGivenName>Richard </PersonGivenName>
+					<PersonFamilyName>Humphreys</PersonFamilyName>
+				</Signatory>
+			</OwnershipDeclaration>
+		</OwnershipCertificates>
+		<Conditions>
+			<ConditionsDescription>
+				<DescriptionText>Demolition of existing conservatory and extension to north elevation. Erection of single storey extensions to north, east and south elevations, 1 dormer window to east roof slope and 1 dormer window to west roof slope. Formation half gable ended roof.</DescriptionText>
+				<DecisionApplicationNumberText>TA/2014/1498</DecisionApplicationNumberText>
+				<DecisionDate>2014-11-12</DecisionDate>
+				<ConditionNumber>2</ConditionNumber>
+				<ProposalState>
+					<ProposalStarted>0</ProposalStarted>
+					<ProposalCompleted>0</ProposalCompleted>
+				</ProposalState>
+			</ConditionsDescription>
+			<ConditionsRemovalVariation>
+				<RemoveOrChangeReason>To permit an alteration in the design of the front elevation - substituting two small pitched roof dormers for the large single central one and a change of fenestration detail on the rear and part of the south elevation. </RemoveOrChangeReason>
+				<VariationDescription>Substitute submitted drawing DL/MJ/4.01B for the approved drawing DL/MJ/4.01 (as recited with others in the condition)  </VariationDescription>
+			</ConditionsRemovalVariation>
+		</Conditions>
+	</ApplicationData>
+	<Declaration>
+		<DeclarationDate>2015-03-12</DeclarationDate>
+		<DeclarationMade>1</DeclarationMade>
+	</Declaration>
+</Proposal>

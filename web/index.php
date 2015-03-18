@@ -4,7 +4,7 @@
 //$planningPortalLPA = 'M3645';
 //$planningPortalLPAPassword = 'ta8ndri3dge';
 //$url = 'Application_imported.xml';
-$url = "Application.xml";
+$url = "PP-04041230.xml";
 $salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
 $salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
 $salesforcePassword = "#arcus123";
@@ -26,14 +26,12 @@ require_once 'inc/functions.php';
 
     $applicationInformation = simplexml_load_file($url) or die("Error: Cannot create object");
 
-    print_r($applicationInformation);
-
     $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
-/*}catch (Exception $ex) {
+}catch (Exception $ex) {
 
       var_dump($ex->faultcode, $ex->faultstring, $ex->faultactor, $ex->detail, $ex->_name, $ex->headerfault);
-    }*/
+    }
 
 
 
