@@ -8,6 +8,7 @@
 	<!--$Id: 001_RemoveDataDescription.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
 	<!--$Id: 1.0-0.11.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
 	<!--$Id: 0.11-0.10.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
+	<oneapp:SchemaVersion xmlns:oneapp="http://www.govtalk.gov.uk/planning/OneAppProposal-2006">0.10</oneapp:SchemaVersion>
 	<ApplicationHeader>
 		<ApplicationTo>M3645                         </ApplicationTo>
 		<DateSubmitted>2015-03-16</DateSubmitted>
