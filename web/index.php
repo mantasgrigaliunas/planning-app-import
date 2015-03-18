@@ -26,7 +26,7 @@ require_once 'inc/functions.php';
 
     $applicationInformation = simplexml_load_file($url) or die("Error: Cannot create object");
 
-    print_r($applicationInformation . "<br\>");
+    print_r($applicationInformation);
 
     //$SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
 
