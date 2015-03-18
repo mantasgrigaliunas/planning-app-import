@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Salesforce.com Partner Web Services API Version 33.0
-Generated on 2015-03-17 10:13:25 +0000.
+Generated on 2015-02-25 16:34:22 +0000.
 
 Copyright 1999-2015 salesforce.com, inc.
 All Rights Reserved
@@ -608,8 +608,8 @@ All Rights Reserved
 
             <complexType name="DescribeQuickActionDefaultValue">
                 <sequence>
-                    <element name="defaultValue"	type="xsd:string" nillable="true"/>
-                    <element name="field" 		type="xsd:string" nillable="false"/>
+                    <element name="defaultValue"    type="xsd:string" nillable="true"/>
+                    <element name="field"       type="xsd:string" nillable="false"/>
                 </sequence>
             </complexType>
 
@@ -693,7 +693,7 @@ All Rights Reserved
 
             <complexType name="DescribeSObjectResult">
                 <sequence>
-                    <element name="actionOverrides"	  type="tns:ActionOverride" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="actionOverrides"   type="tns:ActionOverride" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="activateable"        type="xsd:boolean"/>
                     <element name="childRelationships"  type="tns:ChildRelationship" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="compactLayoutable"   type="xsd:boolean"/>
@@ -858,10 +858,10 @@ All Rights Reserved
                     <element name="extraTypeInfo"              type="xsd:string"  minOccurs="0"/>
                     <element name="filterable"                 type="xsd:boolean"/>
 
-                    <element name="filteredLookupInfo"			   type="tns:FilteredLookupInfo" nillable="true" minOccurs="0" />
+                    <element name="filteredLookupInfo"             type="tns:FilteredLookupInfo" nillable="true" minOccurs="0" />
 
                     <element name="groupable"                  type="xsd:boolean"/>
-                    <element name="highScaleNumber"			   type="xsd:boolean" minOccurs="0" />
+                    <element name="highScaleNumber"            type="xsd:boolean" minOccurs="0" />
                     <element name="htmlFormatted"              type="xsd:boolean" minOccurs="0"/>
                     <element name="idLookup"                   type="xsd:boolean"/>
                     <element name="inlineHelpText"             type="xsd:string" minOccurs="0"/>
@@ -960,11 +960,11 @@ All Rights Reserved
 
             <complexType name="DescribeFlexiPageResult">
                 <sequence>
-                    <element name="id"      		type="tns:ID"/>
+                    <element name="id"              type="tns:ID"/>
                     <element name="label"            type="xsd:string"/>
                     <element name="name"            type="xsd:string"/>
                     <element name="quickActionList"             type="tns:DescribeQuickActionListResult" minOccurs="0" />
-                    <element name="regions"			type="tns:DescribeFlexiPageRegion" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="regions"         type="tns:DescribeFlexiPageRegion" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="sobjectType"     type="xsd:string" nillable="true"/>
                     <element name="template"     type="xsd:string" nillable="true"/>
                     <element name="type"            type="xsd:string"/>
@@ -973,23 +973,23 @@ All Rights Reserved
 
             <complexType name="DescribeFlexiPageRegion">
                 <sequence>
-                    <element name="components"  	type="tns:DescribeComponentInstance" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="name"   			type="xsd:string"/>
+                    <element name="components"      type="tns:DescribeComponentInstance" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="name"            type="xsd:string"/>
                 </sequence>
             </complexType>
 
             <complexType name="DescribeComponentInstance">
                 <sequence>
-                    <element name="properties"  	type="tns:DescribeComponentInstanceProperty" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="typeName"   		type="xsd:string"/>
+                    <element name="properties"      type="tns:DescribeComponentInstanceProperty" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="typeName"        type="xsd:string"/>
                     <element name="typeNamespace"   type="xsd:string"/>
                 </sequence>
             </complexType>
 
             <complexType name="DescribeComponentInstanceProperty">
                 <sequence>
-                    <element name="name"   			type="xsd:string"/>
-                    <element name="value"   		type="xsd:string" nillable="true" />
+                    <element name="name"            type="xsd:string"/>
+                    <element name="value"           type="xsd:string" nillable="true" />
                 </sequence>
             </complexType>
 
@@ -1185,7 +1185,7 @@ All Rights Reserved
                     <element name="heading"                 type="xsd:string" nillable="true"/>
                     <element name="layoutRows"              type="tns:DescribeLayoutRow" maxOccurs="unbounded"/>
                     <element name="rows"                    type="xsd:int"/>
-                    <element name="tabOrder"              	type="tns:TabOrderType"/>
+                    <element name="tabOrder"                type="tns:TabOrderType"/>
                     <element name="useCollapsibleSection"   type="xsd:boolean"/>
                     <element name="useHeading"              type="xsd:boolean"/>
                 </sequence>
@@ -1446,7 +1446,7 @@ All Rights Reserved
                     <element name="body"                nillable="true" minOccurs="0" type="xsd:base64Binary"/>
                     <element name="contentType"         nillable="true" minOccurs="0" type="xsd:string" />
                     <element name="fileName"            type="xsd:string" />
-                    <element name="inline"				type="xsd:boolean" minOccurs="0"/>
+                    <element name="inline"              type="xsd:boolean" minOccurs="0"/>
                 </sequence>
             </complexType>
             <simpleType name="EmailPriority">
@@ -1772,14 +1772,14 @@ All Rights Reserved
             </sequence>
         </complexType>
 
-		<complexType name="ActionOverride">
-			<sequence>
-				<element name="isAvailableInTouch" type="xsd:boolean"/>
-				<element name="name" type="xsd:string"/>
-				<element name="pageId" type="tns:ID"/>
-				<element name="url" type="xsd:string"/>
-			</sequence>
-		</complexType>
+        <complexType name="ActionOverride">
+            <sequence>
+                <element name="isAvailableInTouch" type="xsd:boolean"/>
+                <element name="name" type="xsd:string"/>
+                <element name="pageId" type="tns:ID"/>
+                <element name="url" type="xsd:string"/>
+            </sequence>
+        </complexType>
 
 
 
@@ -2813,7 +2813,7 @@ All Rights Reserved
                     <sequence>
                         <element name="language"  type="xsd:string" minOccurs="0"/>
 
-                    	<element name="localizeErrors" type="xsd:boolean" minOccurs="0"/>
+                        <element name="localizeErrors" type="xsd:boolean" minOccurs="0"/>
 
                     </sequence>
                 </complexType>
@@ -5074,7 +5074,7 @@ All Rights Reserved
     <service name="SforceService">
         <documentation>Sforce SOAP API</documentation>
         <port binding="tns:SoapBinding" name="Soap">
-            <soap:address location="https://test.salesforce.com/services/Soap/u/33.0"/>
+            <soap:address location="https://login.salesforce.com/services/Soap/u/33.0"/>
         </port>
     </service>
 </definitions>

@@ -5,13 +5,13 @@
 //$planningPortalLPAPassword = 'ta8ndri3dge';
 //$url = 'Application_imported.xml';
 $url = "PP-04041230.xml";
-#$salesforceUsername = "guillem.medina@tandridge.built";
-#$salesforceToken = "y8Ubf0fKgZPbDPvwmsWJ5yMAV";
-#$salesforcePassword = "arcusglobal87";
+$salesforceUsername = "guillem.medina@tandridge.built";
+$salesforceToken = "y8Ubf0fKgZPbDPvwmsWJ5yMAV";
+$salesforcePassword = "arcusglobal87";
 
-$salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
-$salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
-$salesforcePassword = "#arcus123";
+#$salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
+#$salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
+#$salesforcePassword = "#arcus123";
 
 ini_set('max_execution_time', 300);  //300 seconds = 5 minutes
 //  Requires
