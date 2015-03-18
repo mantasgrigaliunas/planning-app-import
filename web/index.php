@@ -24,9 +24,11 @@ require_once 'inc/functions.php';
     //$PP = new PlanningPortalConnection($planningPortalLPA, $planningPortalLPAPassword, $log);
     $SF = new SalesforceConnection($salesforceUsername, $salesforcePassword, $salesforceToken, $log);
 
-    $applicationInformation = simplexml_load_file($url) or die("Error: Cannot create object");
+    $appinfo = simplexml_load_file($url) or die("Error: Cannot create object");
 
-    $SFPlanningApplication = $SF->CreatePlanningApplication($applicationInformation);
+    echo $appinfo->ApplicationHeader->FormattedRefNum . "<br>";
+
+    $SFPlanningApplication = $SF->CreatePlanningApplication($appinfo);
 
 }catch (Exception $ex) {
 
