@@ -1,2 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Proposal Version="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><!--$Id: 006_NamespaceFix.xsl 5610 2013-07-30 16:09:13Z andrewc $--><!--$Id: 005_DoCleanUpTasks.xsl 5500 2013-04-23 14:52:18Z andrewc $--><!--$Id: 004_CleanUpNodes.xsl 5480 2013-04-12 15:16:55Z andrewc $--><!--$Id: 003_UnknownNodes.xsl 5548 2013-06-17 15:47:58Z andrewc $--><!--$Id: 002_IndicatorEmptyNodes.xsl 6028 2014-02-24 15:12:04Z dariuszh $--><!--$Id: 001_RemoveDataDescription.xsl 5480 2013-04-12 15:16:55Z andrewc $--><!--$Id: 1.0-0.11.xsl 5480 2013-04-12 15:16:55Z andrewc $--><!--$Id: 0.11-0.10.xsl 5480 2013-04-12 15:16:55Z andrewc $--><oneapp:SchemaVersion xmlns:oneapp="http://www.govtalk.gov.uk/planning/OneAppProposal-2006">0.10</oneapp:SchemaVersion><ApplicationHeader><ApplicationTo>M3645</ApplicationTo><DateSubmitted>2015-03-05</DateSubmitted><RefNum>4027255</RefNum><FormattedRefNum>PP-04027255</FormattedRefNum><ApplicationVersion>1</ApplicationVersion><AttachmentsChanged>false</AttachmentsChanged><Description>Dickinson House NMA</Description><Payment><PaymentMethod>Cheque</PaymentMethod><AmountDue>195</AmountDue><AmountPaid>0</AmountPaid><Currency>GBP</Currency></Payment><IsValidApplication>true</IsValidApplication></ApplicationHeader><FileAttachments><FileAttachment href=""><Identifier>22802812</Identifier><Size>352044</Size><MimeType>application/pdf</MimeType><FileName>ApplicationForm.pdf</FileName><PrintInformation><PaperSize><StandardSize>A4</StandardSize></PaperSize><HasBeenPrinted>false</HasBeenPrinted><HasScale>false</HasScale></PrintInformation><Reference>Application Form</Reference></FileAttachment><FileAttachment href=""><Identifier>22802813</Identifier><Size>352044</Size><MimeType>application/pdf</MimeType><FileName>ApplicationFormNoPersonalData.pdf</FileName><PrintInformation><PaperSize><StandardSize>A4</StandardSize></PaperSize><HasBeenPrinted>false</HasBeenPrinted><HasScale>false</HasScale></PrintInformation><Reference>Application Form - Without Personal Data</Reference></FileAttachment><FileAttachment href=""><Identifier>22802815</Identifier><Size>8614</Size><MimeType>application/pdf</MimeType><FileName>AttachmentSummary.pdf</FileName><PrintInformation><PaperSize><StandardSize>A4</StandardSize></PaperSize><HasBeenPrinted>false</HasBeenPrinted><HasScale>false</HasScale></PrintInformation><Reference>A summary of the attachments in the proposal</Reference></FileAttachment><FileAttachment href=""><Identifier>22785394</Identifier><Size>539438</Size><MimeType>application/pdf</MimeType><FileName>Dickinson House - Location Plan.pdf</FileName><PrintInformation><HasBeenPrinted>true</HasBeenPrinted><HasScale>true</HasScale></PrintInformation><Reference>Other plans</Reference></FileAttachment><FileAttachment href=""><Identifier>22802794</Identifier><Size>979761</Size><MimeType>application/pdf</MimeType><FileName>Dickinson House - Units 2-4 - NDA Letter TDC 05032015.pdf</FileName><PrintInformation><HasBeenPrinted>true</HasBeenPrinted><HasScale>true</HasScale></PrintInformation><Reference>Supporting Planning Statement</Reference></FileAttachment><FileAttachment href=""><Identifier>22802796</Identifier><Size>1741238</Size><MimeType>application/pdf</MimeType><FileName>Dickinson House - Units 2-4 - Natural Slate Brochure.pdf</FileName><PrintInformation><HasBeenPrinted>true</HasBeenPrinted><HasScale>true</HasScale></PrintInformation><Reference>Other relevant information</Reference></FileAttachment><FileAttachment href=""><Identifier>22802814</Identifier><Size>56224</Size><MimeType>application/pdf</MimeType><FileName>FeeCalculation.pdf</FileName><PrintInformation><PaperSize><StandardSize>A4</StandardSize></PaperSize><HasBeenPrinted>false</HasBeenPrinted><HasScale>false</HasScale></PrintInformation><Reference>How the fee was calculated</Reference></FileAttachment></FileAttachments><Applicant><PersonName><PersonFamilyName/></PersonName><OrgName>R E Dickinson Properties</OrgName><ExternalAddress><InternationalAddress><IntAddressLine>c/o Agent</IntAddressLine><IntAddressLine/><IntAddressLine/><IntAddressLine/><IntAddressLine/><Country>United Kingdom</Country></InternationalAddress></ExternalAddress><ContactDetails PreferredContactMedium="Telephone"><Email EmailPreferred="no" EmailUsage="work"><EmailAddress/></Email><Telephone TelMobile="no" TelPreferred="yes" TelUse="work"><TelNationalNumber/></Telephone><Telephone TelMobile="yes" TelPreferred="no" TelUse="work"><TelNationalNumber/></Telephone><Fax FaxMobile="no" FaxPreferred="no" FaxUse="work"><FaxNationalNumber/></Fax></ContactDetails></Applicant><Agent><PersonName><PersonNameTitle>Mr</PersonNameTitle><PersonGivenName>Philip</PersonGivenName><PersonFamilyName>Stone</PersonFamilyName></PersonName><OrgName>PHILIP STONE</OrgName><ExternalAddress><InternationalAddress><IntAddressLine>Sunicot</IntAddressLine><IntAddressLine>Farthings Walk</IntAddressLine><IntAddressLine/><IntAddressLine>Horsham</IntAddressLine><IntAddressLine>West Sussex</IntAddressLine><InternationalPostCode>RH12 1WR</InternationalPostCode><Country>United Kingdom</Country></InternationalAddress></ExternalAddress><ContactDetails PreferredContactMedium="Telephone"><Email EmailPreferred="no" EmailUsage="work"><EmailAddress>stonephilip@btconnect.com</EmailAddress></Email><Telephone TelMobile="no" TelPreferred="yes" TelUse="work"><TelNationalNumber>01403 240033</TelNationalNumber></Telephone><Telephone TelMobile="yes" TelPreferred="no" TelUse="work"><TelNationalNumber/></Telephone><Fax FaxMobile="no" FaxPreferred="no" FaxUse="work"><FaxNationalNumber/></Fax></ContactDetails></Agent><SiteLocation><BS7666Address><PAON><StartRange><Number>7</Number><Suffix>A</Suffix></StartRange><EndRange/><Description>Units 2-4 Dickinson House</Description></PAON><StreetDescription>Mid Street</StreetDescription><Locality/><Town>South Nutfield</Town><AdministrativeArea>Surrey</AdministrativeArea><PostTown>South Nutfield</PostTown><PostCode>RH1 4JU</PostCode><UniquePropertyReferenceNumber>10007916118</UniquePropertyReferenceNumber></BS7666Address><SiteGridRefence><X>530660</X><Y>149881</Y></SiteGridRefence></SiteLocation><ApplicationScenario><ScenarioNumber>34</ScenarioNumber></ApplicationScenario><ConsentRegimes><ConsentRegime>Non-Material Amendment</ConsentRegime></ConsentRegimes><ApplicationData><NonResidentialDevelopment AreaUnit=""><C1><ExistingGrossFloorspace/><GrossFloorspaceToBeLost/><TotalGrossFloorspaceProposed/><NetAdditionalGrossFloorspace/><RoomInformation><ExistingRoomsToBeLost/><TotalRoomsProposed/><NetAdditionalRooms/></RoomInformation></C1><C2><ExistingGrossFloorspace/><GrossFloorspaceToBeLost/><TotalGrossFloorspaceProposed/><NetAdditionalGrossFloorspace/><RoomInformation><ExistingRoomsToBeLost/><TotalRoomsProposed/><NetAdditionalRooms/></RoomInformation></C2><Other><ExistingGrossFloorspace/><GrossFloorspaceToBeLost/><TotalGrossFloorspaceProposed/><NetAdditionalGrossFloorspace/><RoomInformation><ExistingRoomsToBeLost/><TotalRoomsProposed/><NetAdditionalRooms/></RoomInformation></Other></NonResidentialDevelopment><Advice><HaveSoughtAdvice>0</HaveSoughtAdvice><AdviceDetails></AdviceDetails></Advice><SiteVisit><SeeSite>1</SeeSite><VisitContactDetails><ContactOther><PersonName><PersonFamilyName/></PersonName><ContactDetails PreferredContactMedium="Telephone"><Email EmailPreferred="no" EmailUsage="home"><EmailAddress/></Email><Telephone TelMobile="no" TelPreferred="yes" TelUse="work"><TelNationalNumber/></Telephone></ContactDetails></ContactOther><ContactAgent/></VisitContactDetails></SiteVisit></ApplicationData><DeclarationOfInterest><IsRelated>0</IsRelated></DeclarationOfInterest><Declaration><DeclarationDate>2015-03-05</DeclarationDate><DeclarationMade>1</DeclarationMade></Declaration></Proposal>
+<Proposal xmlns:gml="http://www.opengis.net/gml" Version="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><!--$Id: 006_NamespaceFix.xsl 5610 2013-07-30 16:09:13Z andrewc $--><!--$Id: 005_DoCleanUpTasks.xsl 5500 2013-04-23 14:52:18Z andrewc $--><!--$Id: 004_CleanUpNodes.xsl 5480 2013-04-12 15:16:55Z andrewc $--><!--$Id: 003_UnknownNodes.xsl 5548 2013-06-17 15:47:58Z andrewc $--><!--$Id: 002_IndicatorEmptyNodes.xsl 6028 2014-02-24 15:12:04Z dariuszh $--><!--$Id: 001_RemoveDataDescription.xsl 5480 2013-04-12 15:16:55Z andrewc $--><!--$Id: 1.0-0.11.xsl 5480 2013-04-12 15:16:55Z andrewc $--><!--$Id: 0.11-0.10.xsl 5480 2013-04-12 15:16:55Z andrewc $-->
+    <oneapp:SchemaVersion xmlns:oneapp="http://www.govtalk.gov.uk/planning/OneAppProposal-2006">0.10</oneapp:SchemaVersion>
+    <ApplicationHeader><ApplicationTo>M3645
+        </ApplicationTo>
+        <DateSubmitted>2015-03-19</DateSubmitted>
+        <RefNum>3955668</RefNum>
+        <FormattedRefNum>PP-03955668</FormattedRefNum>
+        <ApplicationVersion>1</ApplicationVersion>
+        <AttachmentsChanged>false</AttachmentsChanged>
+        <Description>Claridges Mead</Description>
+        <Payment><PaymentMethod>Cheque</PaymentMethod>
+            <AmountDue>172</AmountDue>
+            <AmountPaid>0</AmountPaid>
+            <Currency>GBP</Currency></Payment>
+        <IsValidApplication>true</IsValidApplication></ApplicationHeader>
+    <FileAttachments>
+        <FileAttachment href=""><Identifier>23022683</Identifier>
+            <Size>355699</Size>
+            <MimeType>application/pdf</MimeType>
+            <FileName>ApplicationForm.pdf</FileName>
+            <PrintInformation>
+                <PaperSize><StandardSize>A4</StandardSize></PaperSize>
+                <HasBeenPrinted>false</HasBeenPrinted>
+                <HasScale>false</HasScale></PrintInformation>
+            <Reference>Application Form</Reference></FileAttachment>
+        <FileAttachment href=""><Identifier>23022686</Identifier>
+            <Size>355699</Size>
+            <MimeType>application/pdf</MimeType>
+            <FileName>ApplicationFormNoPersonalData.pdf</FileName>
+            <PrintInformation>
+                <PaperSize><StandardSize>A4</StandardSize></PaperSize>
+                <HasBeenPrinted>false</HasBeenPrinted>
+                <HasScale>false</HasScale></PrintInformation>
+            <Reference>Application Form - Without Personal Data</Reference></FileAttachment>
+        <FileAttachment href=""><Identifier>23022688</Identifier>
+            <Size>8788</Size>
+            <MimeType>application/pdf</MimeType>
+            <FileName>AttachmentSummary.pdf</FileName>
+            <PrintInformation>
+                <PaperSize><StandardSize>A4</StandardSize></PaperSize>
+                <HasBeenPrinted>false</HasBeenPrinted>
+                <HasScale>false</HasScale></PrintInformation>
+            <Reference>A summary of the attachments in the
+                proposal</Reference></FileAttachment>
+        <FileAttachment href=""><Identifier>23022687</Identifier>
+            <Size>56685</Size>
+            <MimeType>application/pdf</MimeType>
+            <FileName>FeeCalculation.pdf</FileName>
+            <PrintInformation>
+                <PaperSize><StandardSize>A4</StandardSize></PaperSize>
+                <HasBeenPrinted>false</HasBeenPrinted>
+                <HasScale>false</HasScale></PrintInformation>
+            <Reference>How the fee was calculated</Reference></FileAttachment>
+        <FileAttachment href=""><Identifier>23022667</Identifier><SuppliedSeparately DeliveryMethod="Post"/><Reference>Site
+            &amp; other plans</Reference></FileAttachment>
+        <FileAttachment href=""><Identifier>23022668</Identifier><SuppliedSeparately DeliveryMethod="Post"/><Reference>The
+            location plan</Reference></FileAttachment>
+        <FileAttachment href=""><Identifier>23022669</Identifier><SuppliedSeparately DeliveryMethod="Post"/><Reference>Site
+            &amp; other plans</Reference></FileAttachment>
+        <FileAttachment href=""><Identifier>23022670</Identifier><SuppliedSeparately DeliveryMethod="Post"/><Reference>Site
+            &amp; other plans</Reference></FileAttachment>
+    </FileAttachments>
+    <Applicant>
+        <PersonName><PersonNameTitle>Mr</PersonNameTitle>
+            <PersonGivenName>Craig</PersonGivenName>
+            <PersonFamilyName>Curtis</PersonFamilyName></PersonName>
+        <ExternalAddress>
+            <InternationalAddress><IntAddressLine>2</IntAddressLine>
+                <IntAddressLine>Claridges Mead</IntAddressLine>
+                <IntAddressLine>Racecourse Road</IntAddressLine>
+                <IntAddressLine>Dormansland</IntAddressLine>
+                <IntAddressLine>Surrey</IntAddressLine>
+                <Country>United Kingdom</Country>
+                <InternationalPostCode>RH7 6PP</InternationalPostCode></InternationalAddress>
+        </ExternalAddress>
+        <ContactDetails PreferredContactMedium="Telephone"><Email EmailPreferred="no" EmailUsage="work"><EmailAddress/></Email>
+            <Telephone TelMobile="no" TelPreferred="yes" TelUse="work"><TelNationalNumber/></Telephone>
+            <Telephone TelMobile="yes" TelPreferred="no" TelUse="work"><TelNationalNumber/></Telephone>
+            <Fax FaxMobile="no" FaxPreferred="no" FaxUse="work"><FaxNationalNumber/></Fax></ContactDetails>
+    </Applicant>
+    <Agent>
+        <PersonName><PersonNameTitle>Mr</PersonNameTitle>
+            <PersonGivenName>richard</PersonGivenName>
+            <PersonFamilyName>neyland</PersonFamilyName></PersonName>
+        <OrgName>Richard Neyland</OrgName>
+        <ExternalAddress>
+            <InternationalAddress><IntAddressLine>the old
+                stables</IntAddressLine>
+                <IntAddressLine>7 ipswich road</IntAddressLine><IntAddressLine/><IntAddressLine>needham
+                    market</IntAddressLine>
+                <IntAddressLine>Suffolk</IntAddressLine>
+                <InternationalPostCode>ip68eg</InternationalPostCode>
+                <Country>United Kingdom</Country></InternationalAddress>
+        </ExternalAddress>
+        <ContactDetails PreferredContactMedium="Telephone">
+            <Email EmailPreferred="no" EmailUsage="work"><EmailAddress>r.neyland157@btinternet.com</EmailAddress></Email>
+            <Telephone TelMobile="no" TelPreferred="yes" TelUse="work"><TelNationalNumber/></Telephone>
+            <Telephone TelMobile="yes" TelPreferred="no" TelUse="work"><TelNationalNumber>07768
+                004919</TelNationalNumber></Telephone>
+            <Fax FaxMobile="no" FaxPreferred="no" FaxUse="work"><FaxNationalNumber/></Fax></ContactDetails>
+    </Agent>
+    <SiteLocation>
+        <BS7666Address>
+            <PAON><StartRange><Number/></StartRange>
+                <Description>Claridges Mead</Description></PAON>
+            <StreetDescription>Racecourse Road</StreetDescription><Locality/><Town>Dormansland</Town>
+            <AdministrativeArea>Surrey</AdministrativeArea>
+            <PostTown>Dormansland</PostTown>
+            <PostCode>RH7 6PP</PostCode>
+            <UniquePropertyReferenceNumber>100062158147</UniquePropertyReferenceNumber></BS7666Address>
+        <SiteGridRefence><X>540469</X>
+            <Y>142775</Y></SiteGridRefence>
+    </SiteLocation>
+    <ApplicationScenario><ScenarioNumber>1</ScenarioNumber></ApplicationScenario>
+    <ConsentRegimes><ConsentRegime>Householder</ConsentRegime></ConsentRegimes>
+    <ApplicationData>
+        <ProposalDescription><DescriptionText>Proposal to enlarge existing
+            kitchen and to form new bedroom within roofspace</DescriptionText>
+            <ProposalState><ProposalStarted>0</ProposalStarted>
+                <ProposalCompleted>0</ProposalCompleted></ProposalState>
+        </ProposalDescription>
+        <NonResidentialDevelopment AreaUnit=""><C1><ExistingGrossFloorspace/><GrossFloorspaceToBeLost/><TotalGrossFloorspaceProposed/><NetAdditionalGrossFloorspace/><RoomInformation><ExistingRoomsToBeLost/><TotalRoomsProposed/><NetAdditionalRooms/></RoomInformation></C1>
+            <C2><ExistingGrossFloorspace/><GrossFloorspaceToBeLost/><TotalGrossFloorspaceProposed/><NetAdditionalGrossFloorspace/><RoomInformation><ExistingRoomsToBeLost/><TotalRoomsProposed/><NetAdditionalRooms/></RoomInformation></C2>
+            <Other><ExistingGrossFloorspace/><GrossFloorspaceToBeLost/><TotalGrossFloorspaceProposed/><NetAdditionalGrossFloorspace/><RoomInformation><ExistingRoomsToBeLost/><TotalRoomsProposed/><NetAdditionalRooms/></RoomInformation></Other>
+        </NonResidentialDevelopment>
+        <Access><NewAlteredVehicular>No</NewAlteredVehicular>
+            <NewAlteredPedestrian>No</NewAlteredPedestrian><NewRightsOfWay/><ChangeRightsOfWay>No</ChangeRightsOfWay></Access>
+        <Parking>
+            <HouseholdParking><ExistingParkingAffected>0</ExistingParkingAffected></HouseholdParking>
+        </Parking>
+        <Materials>
+            <Roof><Existing>Tiled roof with half round ridge
+                tiles</Existing>
+                <Proposed>Tiled roof with half round ridge tiles</Proposed><NotApplicable/><DontKnow/></Roof>
+            <Windows><Existing>Composite material casements with leaded
+                lights</Existing>
+                <Proposed>Composite material casements with leaded
+                    lights</Proposed><NotApplicable/><DontKnow/></Windows>
+            <Boundaries><Existing>N/A</Existing>
+                <Proposed>N/A</Proposed><NotApplicable/><DontKnow/></Boundaries>
+            <VehicleAccess><Existing>N/A</Existing>
+                <Proposed>N/A</Proposed><NotApplicable/><DontKnow/></VehicleAccess>
+            <Lighting><Existing>N/A</Existing>
+                <Proposed>N/A</Proposed><NotApplicable/><DontKnow/></Lighting>
+            <ExternalWalls><Existing>Timber framed walls with white horizontal
+                board cladding</Existing>
+                <Proposed>Timber framed walls with white horizontal board
+                    cladding</Proposed><NotApplicable/><DontKnow/></ExternalWalls>
+            <ExternalDoors><Existing>Composite material with leaded
+                lights</Existing>
+                <Proposed>Composite material with leaded lights</Proposed><NotApplicable/><DontKnow/></ExternalDoors>
+            <Other><Existing>Black uPVC rainwater goods</Existing>
+                <Proposed>Black uPVC rainwater goods</Proposed><NotApplicable/><DontKnow/><SpecifiedOther OtherCode=""/></Other>
+            <SupportingInformation><AdditionalInformation>1</AdditionalInformation>
+                <Reference>Design &amp; Access Statement Existing plans &amp; elevations
+                    Proposed Plans Proposed Elevations</Reference></SupportingInformation>
+        </Materials>
+        <AllTreesHedges>
+            <TreesHedges>
+                <Falling><FallingTreesHedges>0</FallingTreesHedges></Falling>
+                <Removed><TreesHedgesRemoved>0</TreesHedgesRemoved></Removed>
+            </TreesHedges>
+        </AllTreesHedges>
+        <Advice><HaveSoughtAdvice>0</HaveSoughtAdvice>
+            <AdviceDetails></AdviceDetails></Advice>
+        <SiteVisit><SeeSite>1</SeeSite>
+            <VisitContactDetails>
+                <ContactOther><PersonName><PersonFamilyName/></PersonName>
+                    <ContactDetails PreferredContactMedium="Telephone"><Email EmailPreferred="no" EmailUsage="home"><EmailAddress/></Email>
+                        <Telephone TelMobile="no" TelPreferred="yes" TelUse="work"><TelNationalNumber/></Telephone></ContactDetails>
+                </ContactOther><ContactApplicant/></VisitContactDetails></SiteVisit>
+        <OwnershipCertificates><CertificateSelected>CertificateA</CertificateSelected>
+            <NoticeGiven>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+                <NoticeGivenTo>
+                    <NoticeRecipient><NoticeRecipientPerson><PersonFamilyName/></NoticeRecipientPerson>
+                        <NoticeRecipientAddress>
+                            <PAON><StartRange><Number/></StartRange></PAON><StreetDescription/><Locality/></NoticeRecipientAddress></NoticeRecipient><NoticeGivenDate/></NoticeGivenTo>
+            </NoticeGiven>
+            <Advertisement><AdvertDate/><PublicationName/></Advertisement>
+            <OwnershipDeclaration><DeclarationDate>2015-03-10</DeclarationDate>
+                <DeclarationMade>1</DeclarationMade>
+                <Signatory PersonRole="Agent"><PersonNameTitle>Mr</PersonNameTitle>
+                    <PersonGivenName>Richard</PersonGivenName>
+                    <PersonFamilyName>Neyland</PersonFamilyName></Signatory>
+            </OwnershipDeclaration>
+        </OwnershipCertificates>
+    </ApplicationData>
+    <DeclarationOfInterest><IsRelated>0</IsRelated></DeclarationOfInterest>
+    <Declaration><DeclarationDate>2015-03-10</DeclarationDate>
+        <DeclarationMade>1</DeclarationMade></Declaration>
+</Proposal>
