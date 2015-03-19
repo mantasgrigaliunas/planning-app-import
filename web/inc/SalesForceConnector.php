@@ -50,7 +50,7 @@ class SalesforceConnection
     private function debugToFile($contents)
     {
         $file = 'debugFile.txt';
-        file_put_contents($file, echo $contents,true));
+        file_put_contents($file, print_r($contents,true));
     }
 
 
