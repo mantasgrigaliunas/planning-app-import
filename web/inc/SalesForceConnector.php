@@ -39,7 +39,7 @@ class SalesforceConnection
             'Removal/variation of conditions',
             'Reserved matters'];
 
-        foreach ($arr as &$value) 
+        foreach ($arr as &$value){
             $applicationTypeIDs[$value] = $this->ReturnApplicationTypeID($value);
         }
 
