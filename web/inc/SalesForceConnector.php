@@ -428,7 +428,7 @@ class SalesforceConnection
 
                 } else {
                     echo "Failed to Create Temp UPRN for " . $SiteLocation->BS7666Address->UniquePropertyReferenceNumber . "<br>";
-                    echo "ERROR message : " . $SFResponce . "<br>";
+                    print_r($SFResponce);
                 }
             } 
             else {
