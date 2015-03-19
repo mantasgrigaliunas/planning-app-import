@@ -421,14 +421,15 @@ class SalesforceConnection
 
                 $SFResponce = $this->SFConnection->create(array($sObject));
 
-                if ($SFResponce[0]->success == 1) {
+                /*if ($SFResponce[0]->success == 1) {
 
                 echo "TEMP UPRN ID " . $SFResponce[0]->id . "<br>";
                 return $SFResponce[0]->id;
 
                 } else {
                     echo "Failed to Create Temp UPRN for " . $SiteLocation . "<br>";
-                }
+                    echo "ERROR message : " . $SFResponce . "<br>";
+                }*/
             } 
             else {
                 return $uprnId;
@@ -438,6 +439,7 @@ class SalesforceConnection
         }catch(Exception $ex){
 
             echo "UPRN error : " . $ex;
+            return null;
         }
     }
 
