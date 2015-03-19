@@ -397,7 +397,7 @@ class SalesforceConnection
             echo $SiteLocation  . "<br>";
 
             //check if UPRN exists in Salesforce
-            $query = 'SELECT Id from BasicLandPropertyUnit__c WHERE UPRN__c = ' . $UPRN;
+            $query = "SELECT Id from BasicLandPropertyUnit__c WHERE UPRN__c = '" . $UPRN ."'";
             $response = $this->SFConnection->query($query);
             $queryResult = new QueryResult($response);
 
