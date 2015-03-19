@@ -83,11 +83,11 @@ class SalesforceConnection
         $upsertResponse = $this->SFConnection->create(array($sObject));
 
         if ($upsertResponse[0]->success == 1) {
-            echo "Attachment: " . $attachmentName . " uploaded successfully!");
+            echo "Attachment: " . $attachmentName . " uploaded successfully! <br>";
             return $upsertResponse[0]->id;
         } else {
 
-            echo "Attachment Upload Error - Failed to upload " . $attachmentName . " for Planning Application " . $planningApplicationID);
+            echo "Attachment Upload Error - Failed to upload " . $attachmentName . " for Planning Application " . $planningApplicationID . "<br>";
 
             return 'ERROR';
         }
@@ -184,10 +184,10 @@ class SalesforceConnection
     public function CreatePlanningApplication($applicationInformation)
     {
         $applicant = $this->CreateContact($applicationInformation->Applicant);
-        echo "Applicant: " . $applicant"<br>";
+        echo "Applicant: " . $applicant . "<br>";
 
         $UPRN = $this->CreateUPRN($applicationInformation->SiteLocation);
-        echo "UPRN: " . $UPRN"<br>";
+        echo "UPRN: " . $UPRN . "<br>";
 
 
         //  Some application are bloody fussy, and require different descriptions, set the description for the fussy types, else put instructions for council staff to complete.
@@ -236,7 +236,7 @@ class SalesforceConnection
 
         if (strlen($applicationInformation->Agent->PersonName->PersonFamilyName) > 0) {
             $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Agent);
-            echo "Agent: " . $agent. "<br>";
+            echo "Agent: " . $agent . "<br>";
 
         }
 
@@ -252,7 +252,7 @@ class SalesforceConnection
         if ($upsertResponse[0]->success == 1) {
             return $upsertResponse[0]->id;
         } else {
-            echo "Error - Could not insert Planning Application: " . $applicationInformation->ApplicationHeader->FormattedRefNum);
+            echo "Error - Could not insert Planning Application: " . $applicationInformation->ApplicationHeader->FormattedRefNum;
             return 'ERROR';
         }
     }
@@ -339,7 +339,7 @@ class SalesforceConnection
                 return 'ERROR';
             }
 
-            echo echo $SFResponce));
+            echo $SFResponce;
 
             return 'ERROR';
         }
