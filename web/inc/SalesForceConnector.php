@@ -297,6 +297,7 @@ class SalesforceConnection
         ];
 
 
+        ///// DEAL WITH UNAMED CONTACTS /////
         if (strlen($Contact->PersonName->PersonFamilyName) == 0) {
           $contactFields['LastName'] = "Unknown";
         }
@@ -305,43 +306,54 @@ class SalesforceConnection
           $contactFields['LastName'] = $Contact->PersonName->PersonFamilyName;
         }
 
-
+        ////// ASSIGN ACCOUNT //////
         if (strlen($Contact->OrgName) > 0) {
           $contactFields['AccountId'] = htmlspecialchars($this->CreateAccount($Contact->OrgName));
         }
+
+        ////// DEFINE CONTACT OBJECT //////
 
         $sObject = new stdclass();
         $sObject->fields = $contactFields;
         $sObject->type = 'Contact';
 
+
+        ///// CREATE CONTACT BASED ON EMAIL EXISTANCE /////
+        //***If email not specified create contact and return and ID ***//
         if (strlen($contactFields['Email']) == 0) {
             $SFResponce = $this->SFConnection->create(array($sObject));
-        } else {
-            $SFResponce = $this->SFConnection->upsert("Email", array($sObject));
-        }
 
-
-        //  If we have a contact ID return it, else return error
-        if ($SFResponce[0]->success == 1) {
             return $SFResponce[0]->id;
-        }
-        else {
-            //  FIX: We might have tried an upsert as we had an email, however sometimes there are duplicate accounts in Salesforce with the same email address,
-            //  to fix this, we just need to do a basic insert - someone will clean up the duplicates later on.
-            $SFResponce = $this->SFConnection->create(array($sObject));
+        //***else check in salesforce
+        } else {
 
-            if ($SFResponce[0]->success == 1) {
+            //check if Contact with the same email exists in Salesforce
+            $query = "SELECT Id from Contact WHERE Email = '" . $contactFields['Email'] ."'";
+            $response = $this->SFConnection->query($query);
+            $queryResult = new QueryResult($response);
 
-                return $SFResponce[0]->id;
-
-            } else {
-              $this->debugToFile($sObject);
-                return 'ERROR';
+            for ($queryResult->rewind(); $queryResult->pointer < $queryResult->size; $queryResult->next()) {
+                $cointactId = $queryResult->current()->Id;
             }
 
-            echo $SFResponce;
+            //*** if doesn't exist create new contact ***// 
+            if($contactId == NULL){
+                $SFResponce = $this->SFConnection->create(array($sObject));
+            } else {  
 
-            return 'ERROR';
+                return $contactId;
+            }
+        }
+
+
+        //Check if contact was successfully created
+        if ($SFResponce[0]->success == 1) {
+            
+            echo "Contact successfuly created. ID :  " . $contactId . "<br>";
+        }
+        else {
+           
+            echo "Failed to create contact:  " . $SFResponce . "<br>";
         }
     }
 
@@ -409,10 +421,12 @@ class SalesforceConnection
 
                 $createFields = ['PostCode__c' => htmlspecialchars($SiteLocation->BS7666Address->PostCode),
                 'Street__c' => htmlspecialchars($SiteLocation->BS7666Address->StreetDescription),
-                'UPRN__c' => htmlspecialchars($SiteLocation->BS7666Address->UniquePropertyReferenceNumber),
+                'Address_Line__c' => htmlspecialchars($SiteLocation->BS7666Address->Description),
+                'City_Town__c' => htmlspecialchars($SiteLocation->BS7666Address->PostTown),
+                'County__c' => htmlspecialchars($SiteLocation->BS7666Address->AdministrativeArea),
+                'UPRN__c' => $SiteLocation->BS7666Address->UniquePropertyReferenceNumber,
                 'X_COORDINATE__c' => htmlspecialchars($SiteLocation->SiteGridRefence->X),
                 'Y_COORDINATE__c' => htmlspecialchars($SiteLocation->SiteGridRefence->Y),
-                'Temporal__c' => true
                 ];
 
                 $sObject = new stdclass();
@@ -423,7 +437,7 @@ class SalesforceConnection
 
                 if ($SFResponce[0]->success == 1) {
 
-                echo "TEMP UPRN ID " . $SFResponce[0]->id . "<br>";
+                echo "UPRN ID " . $SFResponce[0]->id . "<br>";
                 return $SFResponce[0]->id;
 
                 } else {
