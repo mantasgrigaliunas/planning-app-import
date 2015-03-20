@@ -471,9 +471,9 @@ class SalesforceConnection
     public function SFResponceMessage($SFResponce)
     {
         if($SFResponce[0]->success == 1){
-            echo "Success : " . implode(" ", $SFResponce[0]) . "<br><br>";
+            echo "Success : " .serialize($SFResponce[0]) . "<br><br>";
         } else {
-            echo "Failure : " . implode(" ", $SFResponce[0]) . "<br><br>";
+            echo "Failure : " . serialize($SFResponce[0]) . "<br><br>";
         }
     }
 
