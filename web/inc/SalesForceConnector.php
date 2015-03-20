@@ -236,7 +236,7 @@ class SalesforceConnection
 
         if (strlen($applicationInformation->Agent->PersonName->PersonFamilyName) > 0) {
             $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Agent);
-            echo "Agent: " . $agent . "<br>";
+            echo "Agent: " . $applicationFields['Agent__c'] . "<br>";
 
         }
 
@@ -332,18 +332,18 @@ class SalesforceConnection
             $response = $this->SFConnection->query($query);
             $queryResult = new QueryResult($response);
 
-            //if there is more than one contact with the same email address create new contact
-            if($queryResult->size > 1){
+            //if there is only one contact with a same email use it
+            if($queryResult->size == 1){
 
-                 $SFResponce = $this->SFConnection->create(array($sObject));
-                 return $SFResponce[0]->id;
-
-            } else { //else use the existing contact
-
-                for ($queryResult->rewind(); $queryResult->pointer < $queryResult->size; $queryResult->next()) {
+                 for ($queryResult->rewind(); $queryResult->pointer < $queryResult->size; $queryResult->next()) {
                     $contactId = $queryResult->current()->Id;
                 }
                 return $contactId;
+
+            } else { //in all other cases create new contact
+
+                 $SFResponce = $this->SFConnection->create(array($sObject));
+                 return $SFResponce[0]->id;
             }
 
         }
