@@ -279,6 +279,7 @@ class SalesforceConnection
             } else {
                 return 'ERROR';
             }
+        }
         catch(Exception $e){
             print_r($e);
         }
