@@ -471,9 +471,9 @@ class SalesforceConnection
     public function SFResponceMessage($SFResponce)
     {
         if($SFResponce[0]->success == 1){
-            print_r("Success : " . $SFResponce . "<br><br>");
+            print_r("Success : " . $SFResponce[0] . "<br><br>");
         } else {
-            print_r("Failure : " . $SFResponce . "<br><br>");
+            print_r("Failure : " . $SFResponce[0] . "<br><br>");
         }
     }
 
