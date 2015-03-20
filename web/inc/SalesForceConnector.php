@@ -245,16 +245,12 @@ class SalesforceConnection
         $sObject->type = 'PApplication__c';
 
 
-        //  Upsert UPRN into BasicLandProperyUnit__c - if sucessfull return SF ID, ELSE return ERROR.
-        $upsertResponse = $this->SFConnection->create(array($sObject));
+        //INSERT PLANNING APPLICATION
+        $SFResponse = $this->SFConnection->create(array($sObject));
+        $this->SFResponceMessage($SFResponce);
 
 
-        if ($upsertResponse[0]->success == 1) {
-            return $upsertResponse[0]->id;
-        } else {
-            echo "Error - Could not insert Planning Application: " . $applicationInformation->ApplicationHeader->FormattedRefNum;
-            return 'ERROR';
-        }
+
     }
 
     public function CreateFee($SFApplicationID, $PPFeeAmount)
@@ -273,7 +269,7 @@ class SalesforceConnection
         if ($SFResponce[0]->success == 1) {
 
           $this->debugToFile($SFResponce);
-
+            $this->SFResponceMessage($SFResponce);
             return $SFResponce[0]->id;
         } else {
             return 'ERROR';
@@ -298,13 +294,16 @@ class SalesforceConnection
 
 
         ///// DEAL WITH UNAMED CONTACTS /////
-        if (strlen($Contact->PersonName->PersonFamilyName) == 0) {
-          $contactFields['LastName'] = "Unknown";
-        }
-        elseif(strlen($Contact->PersonName->PersonFamilyName) > 0)
-        {
+
+        //*** if contact last name not specified use OrgName ***//
+        if (strlen($Contact->PersonName->PersonFamilyName) == 0 && strlen($Contact->OrgName) > 0) {
+          $contactFields['LastName'] = $Contact->OrgName;
+        } 
+        else if(strlen($Contact->PersonName->PersonFamilyName) > 0){
+
           $contactFields['LastName'] = $Contact->PersonName->PersonFamilyName;
-        }
+          //*** if last name and org name not specified 'Unknown'
+        } else $contactFields['LastName'] = "Unknown";
 
         ////// ASSIGN ACCOUNT //////
         if (strlen($Contact->OrgName) > 0) {
@@ -322,6 +321,7 @@ class SalesforceConnection
         //***If email not specified create contact and return and ID ***//
         if (strlen($contactFields['Email']) == 0) {
             $SFResponce = $this->SFConnection->create(array($sObject));
+            $this->SFResponceMessage($SFResponce);
             return $SFResponce[0]->id;
 
         //***else check in salesforce
@@ -332,17 +332,17 @@ class SalesforceConnection
             $response = $this->SFConnection->query($query);
             $queryResult = new QueryResult($response);
 
-            //if there is only one contact with a same email use it
+            //if there is only one contact with a same email upsert it and use it
             if($queryResult->size == 1){
 
-                 for ($queryResult->rewind(); $queryResult->pointer < $queryResult->size; $queryResult->next()) {
-                    $contactId = $queryResult->current()->Id;
-                }
-                return $contactId;
+                $SFResponce = $this->SFConnection->upsert("Email", array($sObject));
+                $this->SFResponceMessage($SFResponce);
+                return $SFResponce[0]->id;
 
             } else { //in all other cases create new contact
 
                  $SFResponce = $this->SFConnection->create(array($sObject));
+                 $this->SFResponceMessage($SFResponce);
                  return $SFResponce[0]->id;
             }
 
@@ -383,9 +383,10 @@ class SalesforceConnection
 
             if ($SFResponce[0]->success == 1) {
                 echo "Account ID " . $SFResponce[0]->id . "<br>";
+                $this->SFResponceMessage($SFResponce);
                 return $SFResponce[0]->id;
             } else {
-                echo "Failed to Create Account for " . $OrgName . "<br>";
+                $this->SFResponceMessage($SFResponce);
 
             }
         }
@@ -401,11 +402,9 @@ class SalesforceConnection
 
         try{
 
-
             $UPRN = $SiteLocation->BS7666Address->UniquePropertyReferenceNumber;
 
-
-            echo $SiteLocation  . "<br>";
+            echo $UPRN  . "<br>";
 
             //check if UPRN exists in Salesforce
             $query = "SELECT Id from BasicLandPropertyUnit__c WHERE UPRN__c = '" . $UPRN ."'";
@@ -436,17 +435,12 @@ class SalesforceConnection
 
                 if ($SFResponce[0]->success == 1) {
 
-                echo "UPRN ID " . $SFResponce[0]->id . "<br>";
-                return $SFResponce[0]->id;
+                    $this->SFResponceMessage($SFResponce);
+                    return $SFResponce[0]->id;
 
-                } else {
-                    echo "Failed to Create Temp UPRN for " . $SiteLocation->BS7666Address->UniquePropertyReferenceNumber . "<br>";
-                    print_r($SFResponce);
-                }
+                } else { $this->SFResponceMessage($SFResponce); }
             } 
-            else {
-                return $uprnId;
-            }
+            else { return $uprnId; }
 
 
         }catch(Exception $ex){
@@ -471,6 +465,15 @@ class SalesforceConnection
         } else {
             // Yes! Its on salesforce, now delete it from the planning portal website.
             return False;
+        }
+    }
+
+    public function SFResponceMessage($SFResponce)
+    {
+        if($SFResponce[0]->success == 1){
+            echo "Success : " . $SFResponce . "<br>";
+        } else {
+            echo "Failure : " . $SFResponce . "<br>";
         }
     }
 
