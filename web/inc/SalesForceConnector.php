@@ -1,6 +1,8 @@
 <?php
 define("SOAP_CLIENT_BASEDIR", "inc/SalesForceAPI");
 require_once(SOAP_CLIENT_BASEDIR . '/SforcePartnerClient.php');
+ini_set('soap.wsdl_cache_enabled', 0);
+ini_set('soap.wsdl_cache_ttl', 0);
 
 class SalesforceConnection
 {
@@ -255,24 +257,30 @@ class SalesforceConnection
 
     public function CreateFee($SFApplicationID, $PPFeeAmount)
     {
-        $feeFields = ['Description__c' => htmlspecialchars("PlanningPortal.gov Calculated Fee"),
-            'Net_Fee__c' => $PPFeeAmount,
-            'Planning_Application__c' => htmlspecialchars($SFApplicationID)];
+        
+        try{
 
-        $sObject = new stdclass();
-        $sObject->fields = $feeFields;
-        $sObject->type = 'Planning_Fee__c';
+            $feeFields = ['Description__c' => htmlspecialchars("PlanningPortal.gov Calculated Fee"),
+                'Net_Fee__c' => $PPFeeAmount,
+                'Planning_Application__c' => htmlspecialchars($SFApplicationID)];
 
-        $SFResponce = $this->SFConnection->create(array($sObject));
+            $sObject = new stdclass();
+            $sObject->fields = $feeFields;
+            $sObject->type = 'Planning_Fee__c';
 
-        //  If we have a contact ID return it, else return error
-        if ($SFResponce[0]->success == 1) {
+            $SFResponce = $this->SFConnection->create(array($sObject));
 
-          $this->debugToFile($SFResponce);
-            $this->SFResponceMessage($SFResponce);
-            return $SFResponce[0]->id;
-        } else {
-            return 'ERROR';
+            //  If we have a contact ID return it, else return error
+            if ($SFResponce[0]->success == 1) {
+
+              $this->debugToFile($SFResponce);
+                $this->SFResponceMessage($SFResponce);
+                return $SFResponce[0]->id;
+            } else {
+                return 'ERROR';
+            }
+        catch(Exception $e){
+            print_r($e);
         }
     }
 
@@ -322,7 +330,6 @@ class SalesforceConnection
         if (strlen($contactFields['Email']) == 0) {
             $SFResponce = $this->SFConnection->create(array($sObject));
             $this->SFResponceMessage($SFResponce);
-            print_r($SFResponce);
             return $SFResponce[0]->id;
 
         //***else check in salesforce
