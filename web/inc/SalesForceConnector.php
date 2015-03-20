@@ -484,7 +484,7 @@ class SalesforceConnection
             echo "Success : " .serialize($SFResponce[0]) . "<br><br>";
         } else {
             echo "Failure : <br>";
-            print_r($SFResponce);
+            echo "Failure : " .serialize($SFResponce[0]) . "<br><br>";
         }
     }
 
