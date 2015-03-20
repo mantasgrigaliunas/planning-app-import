@@ -341,7 +341,7 @@ class SalesforceConnection
             } else { //else use the existing contact
 
                 for ($queryResult->rewind(); $queryResult->pointer < $queryResult->size; $queryResult->next()) {
-                    $cointactId = $queryResult->current()->Id;
+                    $contactId = $queryResult->current()->Id;
                 }
                 return $contactId;
             }
