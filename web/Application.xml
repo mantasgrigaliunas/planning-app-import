@@ -9,10 +9,12 @@
         <ApplicationVersion>1</ApplicationVersion>
         <AttachmentsChanged>false</AttachmentsChanged>
         <Description>Claridges Mead</Description>
-        <Payment><PaymentMethod>Cheque</PaymentMethod>
+        <Payment>
+            <PaymentMethod>Cheque</PaymentMethod>
             <AmountDue>172</AmountDue>
             <AmountPaid>0</AmountPaid>
-            <Currency>GBP</Currency></Payment>
+            <Currency>GBP</Currency>
+        </Payment>
         <IsValidApplication>true</IsValidApplication></ApplicationHeader>
     <FileAttachments>
         <FileAttachment href=""><Identifier>23022683</Identifier>

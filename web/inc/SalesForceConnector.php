@@ -273,10 +273,11 @@ class SalesforceConnection
             //  If we have a contact ID return it, else return error
             if ($SFResponce[0]->success == 1) {
 
-              $this->debugToFile($SFResponce);
                 $this->SFResponceMessage($SFResponce);
                 return $SFResponce[0]->id;
+
             } else {
+                $this->SFResponceMessage($SFResponce);
                 return 'ERROR';
             }
         }
