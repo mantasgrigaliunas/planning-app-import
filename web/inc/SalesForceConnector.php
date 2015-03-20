@@ -322,8 +322,8 @@ class SalesforceConnection
         //***If email not specified create contact and return and ID ***//
         if (strlen($contactFields['Email']) == 0) {
             $SFResponce = $this->SFConnection->create(array($sObject));
-
             return $SFResponce[0]->id;
+
         //***else check in salesforce
         } else {
 
@@ -332,27 +332,26 @@ class SalesforceConnection
             $response = $this->SFConnection->query($query);
             $queryResult = new QueryResult($response);
 
-            for ($queryResult->rewind(); $queryResult->pointer < $queryResult->size; $queryResult->next()) {
-                $cointactId = $queryResult->current()->Id;
-            }
+            //if there is more than one contact with the same email address create new contact
+            if($queryResult->size > 1){
 
-            //*** if doesn't exist create new contact ***// 
-            if($contactId == NULL){
-                $SFResponce = $this->SFConnection->create(array($sObject));
-            } else {  
+                 $SFResponce = $this->SFConnection->create(array($sObject));
+                 return $SFResponce[0]->id;
 
+            } else { //else use the existing contact
+
+                for ($queryResult->rewind(); $queryResult->pointer < $queryResult->size; $queryResult->next()) {
+                    $cointactId = $queryResult->current()->Id;
+                }
                 return $contactId;
             }
-        }
 
+        }
 
         //Check if contact was successfully created
         if ($SFResponce[0]->success == 1) {
-            
             echo "Contact successfuly created. ID :  " . $contactId . "<br>";
-        }
-        else {
-           
+        } else {
             echo "Failed to create contact:  " . $SFResponce . "<br>";
         }
     }
