@@ -322,6 +322,7 @@ class SalesforceConnection
         if (strlen($contactFields['Email']) == 0) {
             $SFResponce = $this->SFConnection->create(array($sObject));
             $this->SFResponceMessage($SFResponce);
+            print_r($SFResponce);
             return $SFResponce[0]->id;
 
         //***else check in salesforce
