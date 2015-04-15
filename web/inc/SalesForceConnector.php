@@ -186,11 +186,8 @@ class SalesforceConnection
     public function CreatePlanningApplication($applicationInformation)
     {
         $applicant = $this->CreateContact($applicationInformation->Applicant);
-        echo "Applicant: " . $applicant . "<br>";
 
         $UPRN = $this->CreateUPRN($applicationInformation->SiteLocation);
-        echo "UPRN: " . $UPRN . "<br>";
-
 
         //  Some application are bloody fussy, and require different descriptions, set the description for the fussy types, else put instructions for council staff to complete.
 
@@ -249,9 +246,13 @@ class SalesforceConnection
 
         //INSERT PLANNING APPLICATION
         $SFResponse = $this->SFConnection->create(array($sObject));
-        $this->SFResponceMessage($SFResponce);
 
+         if ($SFResponce[0]->success == 1) {
+                return $SFResponce[0]->id;
 
+            } else {
+                return 'ERROR';
+            }
 
     }
 
@@ -272,12 +273,9 @@ class SalesforceConnection
 
             //  If we have a contact ID return it, else return error
             if ($SFResponce[0]->success == 1) {
-
-                $this->SFResponceMessage($SFResponce);
                 return $SFResponce[0]->id;
 
             } else {
-                $this->SFResponceMessage($SFResponce);
                 return 'ERROR';
             }
         }
@@ -469,15 +467,6 @@ class SalesforceConnection
         } else {
             // Yes! Its on salesforce, now delete it from the planning portal website.
             return False;
-        }
-    }
-
-    public function SFResponceMessage($SFResponce)
-    {
-        if($SFResponce[0]->success == 1){
-            echo "Record Created successfully. Id : " .$SFResponce[0]->id . "<br><br>";
-        } else {
-            echo "Failed to create <br><br>";
         }
     }
 
