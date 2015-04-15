@@ -343,13 +343,11 @@ class SalesforceConnection
             if($queryResult->size == 1){
 
                 $SFResponce = $this->SFConnection->upsert("Email", array($sObject));
-                $this->SFResponceMessage($SFResponce);
                 return $SFResponce[0]->id;
 
             } else { //in all other cases create new contact
 
                  $SFResponce = $this->SFConnection->create(array($sObject));
-                 $this->SFResponceMessage($SFResponce);
                  return $SFResponce[0]->id;
             }
 
@@ -383,11 +381,9 @@ class SalesforceConnection
 
             if ($SFResponce[0]->success == 1) {
                 //echo "Account ID " . $SFResponce[0]->id . "<br>";
-                $this->SFResponceMessage($SFResponce);
                 return $SFResponce[0]->id;
             } else {
-                $this->SFResponceMessage($SFResponce);
-
+                    return 'ERROR';
             }
         }
         else
@@ -436,10 +432,9 @@ class SalesforceConnection
 
                 if ($SFResponce[0]->success == 1) {
 
-                    $this->SFResponceMessage($SFResponce);
                     return $SFResponce[0]->id;
 
-                } else { $this->SFResponceMessage($SFResponce); }
+                }
             } 
             else { return $uprnId; }
 
