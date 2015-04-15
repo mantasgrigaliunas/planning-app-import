@@ -238,7 +238,7 @@ class SalesforceConnection
 
         if (strlen($applicationInformation->Agent->PersonName->PersonFamilyName) > 0) {
             $applicationFields['Agent__c'] = $this->CreateContact($applicationInformation->Agent);
-            echo "Agent: " . $applicationFields['Agent__c'] . "<br>";
+            //echo "Agent: " . $applicationFields['Agent__c'] . "<br>";
 
         }
 
@@ -385,7 +385,7 @@ class SalesforceConnection
             $SFResponce = $this->SFConnection->create(array($sObject));
 
             if ($SFResponce[0]->success == 1) {
-                echo "Account ID " . $SFResponce[0]->id . "<br>";
+                //echo "Account ID " . $SFResponce[0]->id . "<br>";
                 $this->SFResponceMessage($SFResponce);
                 return $SFResponce[0]->id;
             } else {
@@ -407,7 +407,7 @@ class SalesforceConnection
 
             $UPRN = $SiteLocation->BS7666Address->UniquePropertyReferenceNumber;
 
-            echo $UPRN  . "<br>";
+            //echo $UPRN  . "<br>";
 
             //check if UPRN exists in Salesforce
             $query = "SELECT Id from BasicLandPropertyUnit__c WHERE UPRN__c = '" . $UPRN ."'";
@@ -449,7 +449,7 @@ class SalesforceConnection
 
         }catch(Exception $ex){
 
-            echo "UPRN error : " . $ex;
+            //echo "UPRN error : " . $ex;
             return null;
         }
     }
@@ -475,7 +475,7 @@ class SalesforceConnection
     public function SFResponceMessage($SFResponce)
     {
         if($SFResponce[0]->success == 1){
-            echo "Record Created successfully. Id : " .$SFResponce->id . "<br><br>";
+            echo "Record Created successfully. Id : " .$SFResponce[0]->id . "<br><br>";
         } else {
             echo "Failed to create <br><br>";
         }
