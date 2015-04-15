@@ -247,12 +247,14 @@ class SalesforceConnection
         //INSERT PLANNING APPLICATION
         $SFResponse = $this->SFConnection->create(array($sObject));
 
-         if ($SFResponce[0]->success == 1) {
+        return $SFResponce[0]->id;
+
+         /*if ($SFResponce[0]->success == 1) {
                 return $SFResponce[0]->id;
 
             } else {
                 return 'ERROR';
-            }
+            }*/
 
     }
 
