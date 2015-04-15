@@ -357,13 +357,6 @@ class SalesforceConnection
             }
 
         }
-
-        //Check if contact was successfully created
-        if ($SFResponce[0]->success == 1) {
-            echo "Contact successfuly created. ID :  " . $contactId . "<br>";
-        } else {
-            echo "Failed to create contact:  " . $SFResponce . "<br>";
-        }
     }
 
     private function CreateAccount($OrgName)
@@ -427,7 +420,8 @@ class SalesforceConnection
 
             if ($uprnId == NULL) {
 
-                $createFields = ['PostCode__c' => htmlspecialchars($SiteLocation->BS7666Address->PostCode),
+                $createFields = ['Name' => $SiteLocation->BS7666Address->UniquePropertyReferenceNumber,
+                'PostCode__c' => htmlspecialchars($SiteLocation->BS7666Address->PostCode),
                 'Street__c' => htmlspecialchars($SiteLocation->BS7666Address->StreetDescription),
                 'Address_Line__c' => htmlspecialchars($SiteLocation->BS7666Address->Description),
                 'City_Town__c' => htmlspecialchars($SiteLocation->BS7666Address->PostTown),
@@ -481,10 +475,9 @@ class SalesforceConnection
     public function SFResponceMessage($SFResponce)
     {
         if($SFResponce[0]->success == 1){
-            echo "Success : " .serialize($SFResponce[0]) . "<br><br>";
+            echo "Record Created successfully. Id : " .$SFResponce->id . "<br><br>";
         } else {
-            echo "Failure : <br>";
-            echo "Failure : " .serialize($SFResponce[0]) . "<br><br>";
+            echo "Failed to create <br><br>";
         }
     }
 
