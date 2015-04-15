@@ -6,8 +6,8 @@
 //$url = 'Application_imported.xml';
 $url = "Application.xml";
 $salesforceUsername = "mantas.grigaliunas@arcus.built.generic";
-$salesforceToken = "8wnpOrEGzHuLZLCFUIbCquag";
-$salesforcePassword = "arcusglobal90";
+$salesforceToken = "bci93l7vnDB0eoDzYc4rXLVB";
+$salesforcePassword = "#arcus123";
 
 #$salesforceUsername = "mantas.grigaliunas@arcus.built.mantas";
 #$salesforceToken = "9rktHA2u0NWJX6Jh4PTh6lbX";
