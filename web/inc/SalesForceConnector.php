@@ -329,7 +329,6 @@ class SalesforceConnection
         //***If email not specified create contact and return and ID ***//
         if (strlen($contactFields['Email']) == 0) {
             $SFResponce = $this->SFConnection->create(array($sObject));
-            $this->SFResponceMessage($SFResponce);
             return $SFResponce[0]->id;
 
         //***else check in salesforce
