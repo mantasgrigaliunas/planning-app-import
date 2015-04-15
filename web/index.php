@@ -32,7 +32,7 @@ try{
 
     $SFPlanningApplication = $SF->CreatePlanningApplication($appinfo);
 
-    echo $SFPlanningApplication;
+    echo 'Planning Application was successfully imported. Id : ' . $SFPlanningApplication;
 
 }catch (Exception $ex) {
 
